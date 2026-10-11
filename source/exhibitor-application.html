@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NTE27 Exhibitor Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;550;650;750;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=20261011-client-terms-1">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav"><a class="brand" href="https://www.nationaltransitionevent.com/"><img class="brand-logo" src="assets/nte-logo-white.png" alt="The National Transition Event"></a><a class="nav-link" href="https://www.nationaltransitionevent.com/">nationaltransitionevent.com</a></nav>
+    <div class="hero"><p class="eyebrow">Monday 1 March 2027 · The Wing, Silverstone</p><h1>Exhibitor application</h1><p>Apply for an NTE27 exhibition space and tell us what your organisation will need on the day.</p></div>
+  </header>
+
+  <main class="page-shell">
+    <form class="main-column" data-web-to-lead data-form-kind="exhibitor" data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your NTE27 exhibitor application. The NTE team will review it and contact you with the outcome.">
+      <input type="hidden" data-sf-field="Logo_Upload_URL__c">
+      <input type="hidden" value="Exhibitor Application" data-sf-field="Web_Form_Type__c">
+      <input type="hidden" value="exhibitor-application-v13" data-sf-field="Form_Version__c">
+      <input type="hidden" data-sf-field="NTE_Event_Code__c">
+      <input type="hidden" data-sf-field="Booking_Reference__c">
+      <input type="hidden" data-combine-fields="contact-first-name,contact-last-name" data-sf-field="Event_Contact_Name__c">
+      <input type="hidden" data-copy-value-from="email" data-sf-field="Event_Contact_Email__c">
+      <input type="hidden" data-copy-value-from="job-title" data-sf-field="Event_Contact_Title__c">
+      <input type="hidden" value="0" data-sf-field="Sponsor_Package_Total__c">
+      <input type="hidden" value="0" data-sf-field="Exhibitor_Space_Price__c">
+      <input type="hidden" value="0" data-sf-field="Power_Socket_Unit_Price__c">
+      <input type="hidden" value="0" data-sf-field="Power_Socket_Total__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Unit_Price__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Total__c">
+      <input type="hidden" value="0" data-sf-field="Included_Staff_Count__c">
+      <input type="hidden" data-copy-value-from="planned-count" data-sf-field="Total_Staff_Count__c">
+      <input type="hidden" value="No" data-sf-field="Additional_Staff_Required__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Count__c">
+      <input type="hidden" value="0" data-sf-field="Listed_Price_Total__c">
+      <input type="hidden" value="Calculated" data-sf-field="Pricing_Status__c">
+      <input type="hidden" value="NTE27-2026-10-07-VAT" data-sf-field="Pricing_Version__c">
+      <input id="invoice-required" type="hidden" value="No" data-sf-field="Invoice_Required__c">
+      <input type="hidden" value="Stripe" data-sf-field="Payment_Method__c">
+      <input type="hidden" value="No" data-sf-field="Invoice_Requested__c">
+
+      <section class="card">
+        <h2>Join us at NTE27</h2>
+        <p class="lede">NTE27 returns to The Wing at Silverstone on Monday 1 March 2027, following a record-breaking event that welcomed more than 1,200 members of the Armed Forces community, over 200 exhibiting organisations and more than 100 Troops' Track Day supercars last year.</p>
+        <p>Delivered by Mission Community and Mission Motorsport, the ‘National Transition Event’ is the largest event of its kind in the UK connecting businesses, government departments and service charities along with the Armed Forces community. The event brings it all together under one roof in an expo-style format, alongside the much-loved Troops’ Track Day on the GP Circuit.</p>
+        <p>NTE creates meaningful connections, encourages collaboration and develops long lasting relationships, while providing valuable insight, shared experiences and access to opportunities.</p>
+        <p>Please note: Attendance is subject to the organisers' approval. Where payment is required, exhibitor space will only be confirmed once full payment has been received.</p>
+      </section>
+
+      <section class="card" id="organisation">
+        <h2><span class="section-number">1</span>Organisation</h2>
+        <div class="grid">
+          <div class="field full"><label class="required" for="company">Organisation name as it should appear in marketing</label><input id="company" required autocomplete="organization" data-sf-field="Company"></div>
+          <div class="field full"><label class="required" for="organisation-category">Organisation category</label><select id="organisation-category" required data-sf-field="Exhibitor_Organisation_Category__c"><option value="">Select a category</option><option>Employer - Automotive Sector</option><option>Employer - Manufacturing Sector</option><option>Employer - Renewable &amp; Clean Energy Sector</option><option value="Employer - Defence">Employer - Defence &amp; Security</option><option>Employer - Built Environment</option><option>Employer - Facilities Management</option><option>Employer - Financial and Professional Services</option><option>Employer - Digital &amp; Technologies</option><option>Employer - Training Provider from any industry</option><option>Employer - Landbased industry</option><option>Employer - Blue Light &amp; NHS</option><option>Employer - Other Sectors not denoted above</option><option>Government or Government Agency</option><option>Local Government or LG related</option><option>Regular or Reserve Services, or Cadets</option><option>Trade Association</option><option>Charity - member of Cobseo</option><option>Charity - not a member of Cobseo</option><option>CIC or Not for Profit</option></select></div>
+          <div class="field full"><label for="website">Organisation website</label><input id="website" type="url" placeholder="https://" autocomplete="url" data-sf-field="Website"></div>
+        </div>
+      </section>
+
+      <section class="card" id="contact">
+        <h2><span class="section-number">2</span>Main contact</h2>
+        <div class="grid">
+          <div class="field"><label for="salutation">Title / prefix</label><select id="salutation" autocomplete="honorific-prefix" data-sf-field="Salutation"><option value="">Select</option><option>Mr.</option><option>Ms.</option><option>Mrs.</option><option>Dr.</option><option>Prof.</option><option>Mx.</option></select></div>
+          <div class="field"><label class="required" for="contact-first-name">First name</label><input id="contact-first-name" required autocomplete="given-name" data-sf-field="FirstName"></div>
+          <div class="field"><label class="required" for="contact-last-name">Surname</label><input id="contact-last-name" required autocomplete="family-name" data-sf-field="LastName"></div>
+          <div class="field"><label class="required" for="job-title">Job title</label><input id="job-title" required autocomplete="organization-title" data-sf-field="Title"></div>
+          <div class="field"><label class="required" for="email">Email address</label><input id="email" type="email" required autocomplete="email" data-sf-field="Email" data-copy-field="Event_Contact_Email__c"></div>
+          <div class="field"><label class="required" for="mobile">Mobile phone</label><input id="mobile" type="tel" required autocomplete="tel" data-sf-field="Event_Contact_Mobile__c"></div>
+          <div class="field"><label class="required" for="phone">Landline or work phone</label><input id="phone" type="tel" required data-sf-field="Phone"></div>
+        </div>
+        <div class="checkline"><input id="second-contact-toggle" type="checkbox"><label for="second-contact-toggle">Add a second contact person</label></div>
+        <div class="conditional" data-conditional-for="second-contact-toggle" data-conditional-value="Yes">
+          <div class="grid">
+            <div class="field"><label for="second-prefix">Prefix</label><input id="second-prefix" data-sf-field="Secondary_Contact_Prefix__c"></div>
+            <div class="field"><label for="second-name">Full name</label><input id="second-name" data-sf-field="Secondary_Contact_Name__c"></div>
+            <div class="field"><label for="second-title">Job title</label><input id="second-title" data-sf-field="Secondary_Contact_Title__c"></div>
+            <div class="field"><label for="second-email">Email</label><input id="second-email" type="email" data-sf-field="Secondary_Contact_Email__c"></div>
+            <div class="field"><label for="second-mobile">Mobile phone</label><input id="second-mobile" type="tel" data-sf-field="Secondary_Contact_Mobile__c"></div>
+            <div class="field"><label for="second-phone">Work phone</label><input id="second-phone" type="tel" data-sf-field="Secondary_Contact_Phone__c"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="history">
+        <h2><span class="section-number">3</span>Previous NTE events</h2>
+        <div class="field full">
+          <span class="label">Which previous NTE events have you exhibited at?</span>
+          <div class="choice-grid">
+            <label class="choice"><input id="nte2024" type="checkbox" value="NTE2024" data-sf-field="Previous_NTE_Events__c"> NTE24</label>
+            <label class="choice"><input id="nte2025" type="checkbox" value="NTE2025" data-sf-field="Previous_NTE_Events__c"> NTE25</label>
+            <label class="choice"><input id="nte2026" type="checkbox" value="NTE2026" data-sf-field="Previous_NTE_Events__c"> NTE26</label>
+          </div>
+          <span class="help">Tick each event where you exhibited. Leave all three unticked if you have not exhibited at any of them.</span>
+        </div>
+      </section>
+
+      <section class="card" id="space">
+        <h2><span class="section-number">4</span>Exhibition space</h2>
+        <div class="field"><label class="required" for="planned-count">How many people do you currently plan to bring, including yourself?</label><input id="planned-count" type="number" min="1" max="99" step="1" inputmode="numeric" required data-sf-field="Planned_Exhibitor_Count__c"><span class="help">Your selected space includes a staff allocation of 2 staff for a single exhibition space and 4 staff for a double space. Any places above that allocation are added to your indicative total at £50 + VAT per person.</span></div>
+        <h3 id="exhibitor-space-heading">Select one space</h3>
+        <div class="options-list" role="radiogroup" aria-labelledby="exhibitor-space-heading" aria-required="true">
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" required value="Garage Space - reduced size with power - £599 + VAT" data-price="599" data-power-included="true" data-sf-field="Exhibitor_Space_Selections__c"> Reduced-depth garage space with power<small>Suitable for trestle-table stands.</small></span><span class="price">£599 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Single Garage - Paddock Side with power - £799 + VAT" data-price="799" data-power-included="true" data-sf-field="Exhibitor_Space_Selections__c"> Single paddock-side garage with power<small>Suitable for vans, cars and smaller tractors.</small></span><span class="price">£799 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Double Garage - Paddock Side with power - £1,299 + VAT" data-price="1299" data-power-included="true" data-sf-field="Exhibitor_Space_Selections__c"> Double paddock-side garage with power<small>Suitable for multiple vans, cars, tractors and equipment.</small></span><span class="price">£1,299 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Single Garage - Track Side - £799 + VAT" data-price="799" data-sf-field="Exhibitor_Space_Selections__c"> Single track-side garage<small>No power included. Suitable for a van, car, large tractor and equipment.</small></span><span class="price">£799 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Double Garage - Track Side - £1,299 + VAT" data-price="1299" data-sf-field="Exhibitor_Space_Selections__c"> Double track-side garage<small>No power included. Suitable for multiple vehicles, large tractors and equipment.</small></span><span class="price">£1,299 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Clean Energy Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Clean Energy Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Clean Energy Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Clean Energy Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Built Environment Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Built Environment Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Built Environment Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Built Environment Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Manufacturing Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Manufacturing Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Manufacturing Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Manufacturing Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Defence &amp; Security Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Defence &amp; Security Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Defence &amp; Security Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Defence &amp; Security Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Digital and Technologies Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Digital &amp; Technologies Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Digital and Technologies Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Digital &amp; Technologies Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="FM Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> FM Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="FM Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> FM Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Professional &amp; Financial Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Professional &amp; Financial Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Professional &amp; Financial Zone - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Professional &amp; Financial Zone - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Training &amp; Education Zone - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Training &amp; Education Zone - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Any other business - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Any other business - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Any other business - Double - £849 + VAT" data-price="849" data-sf-field="Exhibitor_Space_Selections__c"> Any other business - double<small>Two 6ft trestle tables and two chairs.</small></span><span class="price">£849 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Local Government Authority - Single - £249.50 + VAT" data-price="249.5" data-sf-field="Exhibitor_Space_Selections__c"> Local Government Authority - single<small>One 6ft trestle table and one chair; price reflects the 50% discount.</small></span><span class="price">£249.50 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Blue Light - Single - £249.50 + VAT" data-price="249.5" data-sf-field="Exhibitor_Space_Selections__c"> Blue Light - single<small>One 6ft trestle table and one chair; price reflects the 50% discount.</small></span><span class="price">£249.50 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Trade Association - Single - £499 + VAT" data-price="499" data-sf-field="Exhibitor_Space_Selections__c"> Trade Association - single<small>One 6ft trestle table and one chair.</small></span><span class="price">£499 + VAT</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="COBSEO Charity - Single - Free" data-price="0" data-sf-field="Exhibitor_Space_Selections__c"> COBSEO charity - single<small>One 6ft trestle table and one chair.</small></span><span class="price">Free</span></label>
+          <label class="choice package-option"><span><input type="radio" name="exhibitor-space" value="Non COBSEO Charity - Single - Free" data-price="0" data-sf-field="Exhibitor_Space_Selections__c"> Non-COBSEO charity - single<small>One 6ft trestle table and one chair.</small></span><span class="price">Free</span></label>
+        </div>
+      </section>
+
+      <section class="card" id="add-ons">
+        <h2><span class="section-number">5</span>Power and booking total</h2>
+        <div class="grid">
+          <div class="field"><span class="label required" id="power-question-label">Do you need power on your stand for an additional £100 + VAT per socket?</span><div class="choice-grid" role="radiogroup" aria-labelledby="power-question-label" aria-describedby="power-question-help" aria-required="true"><label class="choice"><input type="radio" name="power-required" id="power-required-yes" value="Yes" required data-sf-field="Stand_Power__c"> Yes</label><label class="choice"><input type="radio" name="power-required" value="No" data-sf-field="Stand_Power__c"> No</label></div><span class="help" id="power-question-help">Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.</span></div>
+          <div class="field conditional" data-conditional-for="power-required-yes" data-conditional-value="Yes"><label class="required" for="power-count">Number of sockets</label><input id="power-count" type="number" min="1" max="20" data-required-when-visible data-sf-field="Power_Socket_Count__c"></div>
+        </div>
+        <div class="callout" aria-live="polite"><p data-complimentary-benefits hidden><strong>Included free</strong><br>Single exhibition space, one 6ft trestle table, one chair and two staff places - worth £499 + VAT.</p><strong data-estimate>Select a space to see your total including VAT.</strong><p class="help" data-discount-savings hidden></p></div>
+      </section>
+
+      <section class="card" id="operations">
+        <h2><span class="section-number">6</span>Operations and accessibility</h2>
+        <div class="grid">
+          <div class="field full"><label for="sunday-setup">For garage exhibits and large stands in the halls, setting up between 14:00-18:00 hrs on Sunday is required. Please indicate you are able to do this.</label><select id="sunday-setup" data-sf-field="Exhibitor_Hall_Schedule__c"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div class="field full"><label class="required" for="equipment">Equipment beyond display stands and laptops</label><textarea id="equipment" required placeholder="State None if nothing further" data-sf-field="Stand_Equipment__c"></textarea></div>
+          <div class="field full"><label class="required" for="heavy-vehicle">Will you bring cars, tractors or heavy items that need to be dropped off on a flatbed or trailer?</label><select id="heavy-vehicle" required data-sf-field="Heavy_Vehicle_Required__c"><option value="">Select</option><option>Yes</option><option>No</option><option>Not known yet</option></select></div>
+          <div class="field"><label class="required" for="accessibility">Do you or your staff have any accessibility requirements, such as disabled parking?</label><select id="accessibility" required data-sf-field="Has_Special_Requirements__c"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div class="field conditional" data-conditional-for="accessibility" data-conditional-value="Yes"><label class="required" for="accessibility-details">Please tell us what you need</label><textarea id="accessibility-details" data-required-when-visible data-sf-field="Stand_Special_Requirements__c"></textarea></div>
+        </div>
+      </section>
+
+      <section class="card conditional" id="billing" data-conditional-for="invoice-required" data-conditional-value="Yes" hidden>
+        <h2><span class="section-number">7</span>Billing details</h2>
+        <div class="grid">
+            <div class="field"><label class="required" for="invoice-company">Legal organisation name</label><input id="invoice-company" data-required-when-visible data-sf-field="Invoiced_Company__c"></div>
+            <div class="field"><label for="trading-name">Trading name, if different</label><input id="trading-name" data-sf-field="Trading_Name__c"></div>
+            <div class="field full"><label class="required" for="invoice-address">Billing address, including postcode</label><textarea id="invoice-address" data-required-when-visible data-sf-field="Invoice_Address__c"></textarea></div>
+            <div class="field full"><p class="help"><strong>Please provide the finance contact below, this should be different to the main contact if possible.</strong> The main NTE contact is captured in section 2.</p></div>
+            <div class="field"><label class="required" for="invoice-person">Finance contact name</label><input id="invoice-person" data-required-when-visible data-sf-field="Invoiced_Person__c"></div>
+            <div class="field"><label class="required" for="invoice-email">Finance contact email address</label><input id="invoice-email" type="email" data-required-when-visible data-sf-field="Invoiced_Email__c"></div>
+            <div class="field"><label class="required" for="invoice-phone">Finance contact telephone number</label><input id="invoice-phone" type="tel" data-required-when-visible data-sf-field="Invoice_Contact_Phone__c"></div>
+        </div>
+      </section>
+
+      <section class="card" id="declaration">
+        <h2><span class="section-number" id="declaration-number">8</span>Final details and declaration</h2>
+        <div class="grid">
+          <div class="field"><label class="required" for="industry-body">Industry body or trade association membership</label><input id="industry-body" required placeholder="Enter details or No" data-sf-field="Industry_Body_Details__c"></div>
+          <div class="field"><label class="required" for="discovery">How did you hear about NTE27?</label><select id="discovery" required data-sf-field="Event_Discovery_Source__c"><option value="">Select</option><option>Previous exhibitor</option><option>E-mail invitation</option><option>Word of mouth from previous exhibitor</option><option>Word of mouth from previous attendees</option><option>Website</option><option>LinkedIn</option><option>Facebook</option><option>Instagram</option><option>Other</option></select></div>
+          <div class="field"><label class="required" for="declaration-name">Digital signature (full name)</label><input id="declaration-name" required autocomplete="name" data-sf-field="Declaration_Name__c"><span class="help">Entering your name confirms that the information supplied is accurate and you have authority to proceed with booking.</span></div>
+          <div class="field"><label for="declaration-date">Date</label><input id="declaration-date" type="date" readonly data-declaration-date></div>
+        </div>
+        <div class="checkline"><input id="exhibitor-privacy" type="checkbox" value="1" required data-sf-field="NTE_Privacy_Accepted__c"><label for="exhibitor-privacy">I have read and agree to the <a data-config-link="privacy" target="_blank" rel="noopener">NTE27 Privacy Policy</a>.</label></div>
+        <div class="checkline" data-booking-terms hidden><input id="exhibitor-terms" type="checkbox" value="1" required disabled data-sf-field="NTE_Booking_Terms_Accepted__c"><label for="exhibitor-terms">I have read and agree to the <a data-config-link="terms" target="_blank" rel="noopener">NTE27 Terms and Conditions</a>.</label></div>
+        <div class="button-row"><button class="button" type="submit">Submit exhibitor application</button><a class="button-secondary" href="https://www.nationaltransitionevent.com/">Visit the NTE website</a></div>
+        <div data-form-status hidden aria-live="polite"></div>
+      </section>
+    </form>
+
+  </main>
+
+  <footer class="site-footer">Questions? <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a></footer>
+  <script src="assets/config.js?v=20261011-client-terms-1"></script><script src="assets/forms.js?v=20261011-client-terms-1"></script>
+</body>
+</html>

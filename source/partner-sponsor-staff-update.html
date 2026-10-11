@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+  <title>NTE27 Partner / Sponsor Staff Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;550;650;750;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css?v=20261011-client-terms-1">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="https://www.nationaltransitionevent.com/"><img class="brand-logo" src="assets/nte-logo-white.png" alt="The National Transition Event"></a><a class="nav-link" href="https://www.nationaltransitionevent.com/">nationaltransitionevent.com</a></nav><div class="hero"><h1>Partner / sponsor staff details</h1><p>Confirm the final number and names of everyone attending with your organisation.</p></div></header>
+  <main class="page-shell">
+    <form class="main-column" data-web-to-lead data-form-kind="partner-staff-update" data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your partner / sponsor staff details.">
+      <input type="hidden" value="Partner / Sponsor Staff Update" data-sf-field="Web_Form_Type__c">
+      <input type="hidden" value="partner-sponsor-staff-update-v1" data-sf-field="Form_Version__c">
+      <input type="hidden" value="Partner / sponsor" data-sf-field="Staff_Update_Audience__c">
+      <input type="hidden" data-sf-field="NTE_Event_Code__c">
+      <input type="hidden" data-copy-value-from="partner-staff-total" data-sf-field="Planned_Exhibitor_Count__c">
+      <input type="hidden" data-copy-value-from="partner-staff-names" data-sf-field="Staff_Base_Names__c">
+      <section class="card"><h2>Before you begin</h2><p class="lede">Have your booking reference and the full names of everyone attending ready. Partners and sponsors are not charged for additional staff places.</p></section>
+      <section class="card">
+        <h2><span class="section-number">1</span>Find your booking</h2>
+        <div class="grid">
+          <div class="field full"><label class="required" for="partner-staff-company">Organisation name</label><input id="partner-staff-company" required autocomplete="organization" data-sf-field="Company"></div>
+          <div class="field"><label class="required" for="partner-staff-first-name">Your first name</label><input id="partner-staff-first-name" required autocomplete="given-name" data-sf-field="FirstName"></div>
+          <div class="field"><label class="required" for="partner-staff-last-name">Your surname</label><input id="partner-staff-last-name" required autocomplete="family-name" data-sf-field="LastName"></div>
+          <div class="field"><label class="required" for="partner-staff-email">Your email address</label><input id="partner-staff-email" type="email" required autocomplete="email" data-sf-field="Email"></div>
+          <div class="field"><label class="required" for="partner-staff-reference">Booking reference</label><input id="partner-staff-reference" required autocomplete="off" pattern="NTE-[A-Za-z0-9][A-Za-z0-9\-]{1,74}[A-Za-z0-9]" data-sf-field="Target_Booking_Reference__c"><span class="help">Enter the exact reference beginning NTE- from your booking confirmation.</span></div>
+        </div>
+      </section>
+      <section class="card">
+        <h2><span class="section-number">2</span>Final staff details</h2>
+        <div class="grid">
+          <div class="field"><label class="required" for="partner-staff-total">Final number attending, including you</label><input id="partner-staff-total" type="number" min="1" max="99" step="1" inputmode="numeric" required data-sf-field="Total_Staff_Count__c"></div>
+          <div class="field full"><label class="required" for="partner-staff-names">Staff names</label><textarea id="partner-staff-names" required></textarea><span class="help">Enter one name per line.</span></div>
+          <div class="field"><label class="required" for="partner-staff-signature">Digital signature (full name)</label><input id="partner-staff-signature" required autocomplete="name" data-sf-field="Declaration_Name__c"></div>
+          <div class="field"><label for="partner-staff-date">Date</label><input id="partner-staff-date" type="date" readonly data-declaration-date></div>
+        </div>
+        <div class="button-row"><button class="button" type="submit">Submit staff details</button><a class="button-secondary" href="https://www.nationaltransitionevent.com/">Visit the NTE website</a></div><div data-form-status hidden aria-live="polite"></div>
+      </section>
+    </form>
+  </main>
+  <footer class="site-footer">Questions? <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a></footer><script src="assets/config.js?v=20261011-client-terms-1"></script><script src="assets/forms.js?v=20261011-client-terms-1"></script>
+</body>
+</html>

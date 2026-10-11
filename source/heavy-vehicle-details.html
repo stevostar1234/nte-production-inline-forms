@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+  <title>NTE27 Heavy Vehicle, Equipment and Haulier Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;550;650;750;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css?v=20261011-client-terms-1">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="https://www.nationaltransitionevent.com/"><img class="brand-logo" src="assets/nte-logo-white.png" alt="The National Transition Event"></a><a class="nav-link" href="https://www.nationaltransitionevent.com/">nationaltransitionevent.com</a></nav><div class="hero"><h1>Heavy vehicle details</h1><p>Vehicle, equipment and haulier information required for paddock access at The Wing.</p></div></header>
+  <main class="page-shell">
+    <form class="main-column" data-web-to-lead data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your heavy vehicle, equipment and haulier details. The NTE team will reconcile them with your booking and contact you if anything further is needed.">
+      <input type="hidden" value="Heavy Vehicle Details" data-sf-field="Web_Form_Type__c"><input type="hidden" value="heavy-vehicle-details-v5" data-sf-field="Form_Version__c"><input type="hidden" data-sf-field="NTE_Event_Code__c"><input type="hidden" data-combine-fields="vehicle-first-name,vehicle-last-name" data-sf-field="Event_Contact_Name__c"><input type="hidden" data-copy-value-from="vehicle-email" data-sf-field="Event_Contact_Email__c"><input type="hidden" data-copy-value-from="vehicle-phone" data-sf-field="Event_Contact_Mobile__c">
+      <section class="card"><h2>Delivery and collection</h2><p class="lede">Include all heavy vehicles, equipment and haulier details for your booking. Each submission replaces your previous logistics details, so include any items that are still attending. The information will be shared with Silverstone to arrange paddock-side access.</p><div class="callout warning"><strong>Timing:</strong> delivery is Sunday 28 February 2027, 14:00-18:00 (preferred), or Monday 1 March, 06:30-07:15. All vehicles and equipment must be collected by 17:30 on Monday 1 March.</div></section>
+      <section class="card">
+        <h2><span class="section-number">1</span>Organisation and contacts</h2>
+        <div class="grid">
+          <div class="field full"><label class="required" for="vehicle-company">Name of exhibiting organisation</label><input id="vehicle-company" required data-sf-field="Company"></div>
+          <div class="field"><label class="required" for="vehicle-first-name">Main contact first name</label><input id="vehicle-first-name" required data-sf-field="FirstName"></div>
+          <div class="field"><label class="required" for="vehicle-last-name">Main contact surname</label><input id="vehicle-last-name" required data-sf-field="LastName"></div>
+          <div class="field"><label class="required" for="vehicle-email">Main contact email</label><input id="vehicle-email" type="email" required data-sf-field="Email"></div>
+          <div class="field"><label class="required" for="vehicle-phone">Main contact direct phone</label><input id="vehicle-phone" type="tel" required data-sf-field="Phone"></div>
+          <div class="field"><label class="required" for="vehicle-reference">Booking reference</label><input id="vehicle-reference" required autocomplete="off" pattern="NTE-[A-Za-z0-9][A-Za-z0-9\-]{1,74}[A-Za-z0-9]" data-sf-field="Target_Booking_Reference__c"><span class="help">Enter the exact reference beginning NTE- from your reservation or confirmation email.</span></div>
+          <div class="field"><label class="required" for="vehicle-second-contact">Second contact</label><input id="vehicle-second-contact" required data-sf-field="Secondary_Contact_Name__c"></div>
+          <div class="field"><label class="required" for="vehicle-second-email">Second contact email</label><input id="vehicle-second-email" type="email" required data-sf-field="Secondary_Contact_Email__c"></div>
+          <div class="field"><label class="required" for="vehicle-second-phone">Second contact phone</label><input id="vehicle-second-phone" type="tel" required data-sf-field="Secondary_Contact_Phone__c"></div>
+          <div class="field full"><label class="required" for="delivery-window">Planned delivery window</label><select id="delivery-window" required data-sf-field="Delivery_Window__c"><option value="">Select</option><option>Sunday 28 February between 14:00 - 18:00</option><option>Monday 1 March between 06:30 - 07:15</option></select></div>
+        </div>
+      </section>
+      <section class="card">
+        <h2><span class="section-number">2</span>Vehicles and equipment</h2>
+        <p>Item 1 is required. Add items 2 and 3 only when applicable.</p>
+        <h3>Item 1</h3><div class="grid"><div class="field full"><label class="required" for="item1-description">Manufacturer and model, or a clear description of the item being exhibited</label><input id="item1-description" required data-sf-field="Heavy_Item_1_Description__c"></div><div class="field"><label for="item1-registration">Registration, if known and applicable</label><input id="item1-registration" data-sf-field="Heavy_Item_1_Registration__c"></div><div class="field"><label class="required" for="item1-dimensions">Dimensions (L × W × H)</label><input id="item1-dimensions" required data-sf-field="Heavy_Item_1_Dimensions__c"></div><div class="field"><label class="required" for="item1-weight">Gross weight</label><input id="item1-weight" required data-sf-field="Heavy_Item_1_Gross_Weight__c"></div></div>
+        <h3>Item 2</h3><div class="grid"><div class="field full"><label for="item2-description">Manufacturer and model, or a clear description of the item being exhibited</label><input id="item2-description" data-sf-field="Heavy_Item_2_Description__c"></div><div class="field"><label for="item2-registration">Registration, if known and applicable</label><input id="item2-registration" data-sf-field="Heavy_Item_2_Registration__c"></div><div class="field"><label for="item2-dimensions">Dimensions (L × W × H)</label><input id="item2-dimensions" data-sf-field="Heavy_Item_2_Dimensions__c"></div><div class="field"><label for="item2-weight">Gross weight</label><input id="item2-weight" data-sf-field="Heavy_Item_2_Gross_Weight__c"></div></div>
+        <h3>Item 3</h3><div class="grid"><div class="field full"><label for="item3-description">Manufacturer and model, or a clear description of the item being exhibited</label><input id="item3-description" data-sf-field="Heavy_Item_3_Description__c"></div><div class="field"><label for="item3-registration">Registration, if known and applicable</label><input id="item3-registration" data-sf-field="Heavy_Item_3_Registration__c"></div><div class="field"><label for="item3-dimensions">Dimensions (L × W × H)</label><input id="item3-dimensions" data-sf-field="Heavy_Item_3_Dimensions__c"></div><div class="field"><label for="item3-weight">Gross weight</label><input id="item3-weight" data-sf-field="Heavy_Item_3_Gross_Weight__c"></div></div>
+      </section>
+      <section class="card">
+        <h2><span class="section-number">3</span>Haulier</h2>
+        <div class="grid">
+          <div class="field full"><label class="required" for="haulier-name">Name of haulier delivering / collecting</label><input id="haulier-name" required placeholder="Enter N/A if not applicable" data-sf-field="Haulier_Name__c"></div>
+          <div class="field full"><label for="haulier-staff">Names of haulier staff, if known</label><textarea id="haulier-staff" placeholder="Enter names if known" data-sf-field="Haulier_Staff__c"></textarea></div>
+          <div class="field"><label class="required" for="haulier-type">Type of haulier vehicle</label><input id="haulier-type" required placeholder="Enter N/A if not applicable" data-sf-field="Haulier_Vehicle_Type__c"></div>
+          <div class="field"><label class="required" for="haulier-weight">Gross weight without exhibition item</label><input id="haulier-weight" required placeholder="Enter N/A if not applicable" data-sf-field="Haulier_Vehicle_Gross_Weight__c"></div>
+          <div class="field"><label class="required" for="haulier-dimensions">Haulier vehicle dimensions (L × W × H)</label><input id="haulier-dimensions" required placeholder="Enter N/A if not applicable" data-sf-field="Haulier_Vehicle_Dimensions__c"></div>
+          <div class="field"><label for="haulier-registration">Haulier vehicle registration, if known</label><input id="haulier-registration" data-sf-field="Haulier_Vehicle_Registration__c"><span class="help">A registration will be needed before the delivery date.</span></div>
+          <div class="field"><label class="required" for="vehicle-signature">Digital signature (full name)</label><input id="vehicle-signature" required autocomplete="name" data-sf-field="Declaration_Name__c"></div>
+          <div class="field"><label for="vehicle-signature-date">Date</label><input id="vehicle-signature-date" type="date" readonly data-declaration-date></div>
+        </div>
+        <div class="button-row"><button class="button" type="submit">Submit logistics details</button><a class="button-secondary" href="https://www.nationaltransitionevent.com/">Visit the NTE website</a></div><div data-form-status hidden aria-live="polite"></div>
+      </section>
+    </form>
+  </main>
+  <footer class="site-footer">Operational queries: Kate · 07708 864365</footer><script src="assets/config.js?v=20261011-client-terms-1"></script><script src="assets/forms.js?v=20261011-client-terms-1"></script>
+</body>
+</html>

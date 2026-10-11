@@ -1,0 +1,15 @@
+{
+  "name": "nte-production-inline-forms",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/parity.mjs",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "pngjs": "7.0.0"
+  }
+}

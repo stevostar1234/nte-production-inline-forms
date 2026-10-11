@@ -1,0 +1,1574 @@
+<nte-inline-3d5b7217e49a data-nte-page="delivery-partner-application" data-nte-return-url="https://stevostar1234.github.io/nte-production-forms/thank-you.html" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<template data-nte-content>
+<style>:host { all: initial; display: block; }
+.nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
+.nte-inline-root {
+  --ink: #171417;
+  --ink-soft: #4f4a4d;
+  --gold: #92793f;
+  --gold-dark: #6f5929;
+  --gold-soft: #f1eadb;
+  --paper: #fffdf9;
+  --surface: #ffffff;
+  --mist: #f4f1eb;
+  --line: #ddd5c7;
+  --success: #256348;
+  --warning: #8a591b;
+  --danger: #a32f3c;
+  --shadow: 0 18px 55px rgba(35, 27, 19, 0.12);
+  --radius: 18px;
+  font-family: "NTE Inline Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--mist);
+}
+
+* { box-sizing: border-box; }
+.nte-inline-root { scroll-behavior: smooth; }
+.nte-inline-page { margin: 0; background: var(--mist); line-height: 1.55; }
+a { color: var(--gold-dark); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.site-header {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(105deg, rgba(19, 17, 19, .98), rgba(19, 17, 19, .88)),
+    repeating-linear-gradient(120deg, transparent 0 42px, rgba(146,121,63,.22) 42px 44px);
+}
+.site-header::after {
+  position: absolute;
+  right: -6vw;
+  bottom: -95px;
+  width: 420px;
+  height: 220px;
+  content: "";
+  transform: skewX(-24deg);
+  background: var(--gold);
+  opacity: .18;
+}
+.nav, .hero, .page-shell { width: min(1180px, calc(100% - 34px)); margin-inline: auto; }
+.nav { position: relative; z-index: 2; display: flex; gap: 24px; padding: 18px 0; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; gap: 13px; color: #fff; text-decoration: none; align-items: center; }
+.brand-logo { display: block; width: 118px; height: 68px; padding: 5px; object-fit: contain; background: #fff; }
+.brand-copy { display: grid; font-size: 11.52px; line-height: 1.1; letter-spacing: .13em; text-transform: uppercase; }
+.brand-copy strong { color: var(--gold-soft); font-size: 16.96px; letter-spacing: .04em; }
+.nav-link { color: #fff; font-size: 14.08px; font-weight: 650; text-decoration: none; }
+.hero { position: relative; z-index: 1; padding: clamp(52px, 9vw, 108px) 0 clamp(82px, 12vw, 140px); }
+.eyebrow { margin: 0 0 10px; color: var(--gold-soft); font-size: 12.16px; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
+.hero h1 { max-width: 850px; margin: 0; font-size: clamp(40px, 7vw, 89.6px); line-height: .94; letter-spacing: -.055em; }
+.hero p { max-width: 720px; margin: 22px 0 0; color: #e5e0da; font-size: clamp(16.32px, 2vw, 20.48px); }
+
+.page-shell { position: relative; z-index: 3; margin-top: -62px; padding-bottom: 70px; }
+.sandbox-notice { position: relative; z-index: 4; width: min(1180px, calc(100% - 34px)); margin: 18px auto 0; padding: 13px 17px; border: 1px solid #e7b15a; border-radius: 10px; color: #5f3b08; background: #fff4df; font-weight: 700; }
+.sandbox-notice + .page-shell { margin-top: 18px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 28px; align-items: start; }
+.main-column { min-width: 0; }
+.sidebar { position: sticky; top: 20px; display: grid; gap: 14px; }
+.card { margin-bottom: 22px; padding: clamp(24px, 4vw, 42px); border: 1px solid rgba(146,121,63,.16); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.card.compact { padding: 24px; }
+.card h2 { margin: 0 0 8px; font-size: clamp(22.72px, 3vw, 32px); line-height: 1.15; letter-spacing: -.025em; }
+.card h3 { margin: 28px 0 12px; font-size: 16.8px; }
+.card > p:last-child { margin-bottom: 0; }
+.section-number { display: inline-grid; width: 32px; height: 32px; margin: 0 10px 0 0; border-radius: 50%; color: #fff; background: var(--gold); font-size: 13.76px; vertical-align: 3px; place-items: center; }
+.lede { color: var(--ink-soft); font-size: 16.64px; }
+.muted, .help { color: var(--ink-soft); }
+.help { display: block; margin-top: 6px; font-size: 13.44px; }
+.required::after { content: " *"; color: var(--danger); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px 22px; margin-top: 24px; }
+.field { min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+label, .label { display: block; margin-bottom: 7px; font-size: 14.56px; font-weight: 700; }
+input, select, textarea {
+  width: 100%;
+  min-height: 49px;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+  background: #fff;
+}
+textarea { min-height: 118px; resize: vertical; }
+input:focus, select:focus, textarea:focus, button:focus-visible { outline: 3px solid rgba(146,121,63,.25); outline-offset: 2px; border-color: var(--gold); }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--danger); }
+
+.choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.choice { position: relative; display: flex; gap: 10px; min-height: 52px; margin: 0; padding: 13px; border: 1px solid var(--line); border-radius: 10px; font-weight: 550; align-items: flex-start; cursor: pointer; }
+.choice:hover, .choice:has(input:checked) { border-color: var(--gold); background: var(--gold-soft); }
+.choice input { width: auto; min-height: auto; margin-top: 4px; accent-color: var(--gold-dark); flex: 0 0 auto; }
+.choice strong { display: block; }
+.choice small { display: block; margin-top: 2px; color: var(--ink-soft); font-weight: 450; }
+.options-list { display: grid; gap: 9px; max-height: 540px; padding: 12px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; background: #fbfaf7; }
+.package-option { align-items: center; justify-content: space-between; }
+.package-option small { margin-left: 26px; }
+.package-option .price { color: var(--gold-dark); font-weight: 800; white-space: nowrap; }
+
+.conditional[hidden], [hidden] { display: none !important; }
+.conditional { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.callout { margin: 20px 0 0; padding: 16px 18px; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; background: var(--gold-soft); }
+.callout.warning { border-color: var(--warning); background: #fff4df; }
+.callout.success { border-color: var(--success); background: #eaf6ef; }
+.callout.danger { border-color: var(--danger); background: #fff0f2; }
+.summary-list { display: grid; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.summary-list li { display: flex; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); justify-content: space-between; }
+.summary-list strong { text-align: right; }
+.estimate { margin: 16px 0 0; color: var(--gold-dark); font-size: 20px; font-weight: 800; }
+
+.checkline { display: flex; gap: 11px; margin: 18px 0 0; align-items: flex-start; }
+.checkline input { width: auto; min-height: auto; margin-top: 5px; accent-color: var(--gold-dark); }
+.checkline label { margin: 0; font-weight: 550; }
+.choice-fieldset { min-width: 0; margin: 26px 0 0; padding: 0; border: 0; }
+.choice-fieldset + .choice-fieldset { padding-top: 24px; border-top: 1px solid var(--line); }
+.choice-fieldset .label { margin-bottom: 12px; }
+.button-row { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.button, .button-secondary {
+  display: inline-flex;
+  min-height: 50px;
+  padding: 12px 20px;
+  border: 1px solid var(--gold-dark);
+  border-radius: 9px;
+  font-weight: 750;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+.button { color: #fff; background: var(--gold-dark); }
+.button:hover { color: #fff; background: var(--ink); }
+.button-secondary { color: var(--gold-dark); background: #fff; }
+.button[disabled], .button-secondary[disabled], .button[aria-disabled="true"], .button-secondary[aria-disabled="true"] { border-color: #aaa; color: #666; background: #ddd; cursor: not-allowed; }
+.status { margin-top: 16px; padding: 14px 16px; border-radius: 9px; font-weight: 650; }
+.status.error { color: #6f1823; background: #ffeaed; }
+.status.success { color: #174c35; background: #e7f5ed; }
+
+.email-preview-panel {
+  margin: 28px 0 22px;
+  padding: clamp(24px, 4vw, 36px);
+  border: 1px solid rgba(146,121,63,.28);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #1b181b, #292329);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.email-preview-panel .eyebrow { margin-top: 0; }
+.email-preview-panel h2 { margin: 0 0 8px; font-size: clamp(23.2px, 3vw, 32px); line-height: 1.15; letter-spacing: -.025em; }
+.email-preview-panel p:not(.eyebrow) { max-width: 720px; margin: 0; color: #ded8d2; }
+.email-preview-panel .button-row { margin-top: 20px; }
+.email-preview-panel .button-secondary { border-color: var(--gold-soft); color: var(--ink); background: var(--gold-soft); }
+.email-preview-panel .button-secondary:hover { border-color: #fff; color: #fff; background: transparent; }
+
+.progress { margin: 0; padding: 0; list-style: none; counter-reset: steps; }
+.progress li { position: relative; margin: 0 0 13px; padding-left: 28px; color: var(--ink-soft); font-size: 13.76px; }
+.progress li::before { position: absolute; left: 0; width: 18px; height: 18px; border: 1px solid var(--line); border-radius: 50%; content: counter(steps); counter-increment: steps; font-size: 10.88px; text-align: center; line-height: 17px; }
+.mini-meta { display: grid; gap: 9px; margin: 0; }
+.mini-meta div { display: flex; gap: 10px; font-size: 13.76px; justify-content: space-between; }
+.mini-meta dt { color: var(--ink-soft); }
+.mini-meta dd { margin: 0; font-weight: 700; text-align: right; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.hub-block { margin-top: 34px; }
+.hub-block-header { margin: 0 0 18px; padding: 24px 28px; border: 1px solid rgba(146,121,63,.3); border-radius: var(--radius); background: rgba(255,255,255,.96); box-shadow: var(--shadow); }
+.hub-block-header .eyebrow { margin: 0 0 8px; }
+.hub-block-header h2 { margin: 0 0 8px; font-size: clamp(28.8px, 4vw, 39.2px); letter-spacing: -.04em; }
+.hub-block-header p:last-child { max-width: 760px; margin: 0; color: var(--ink-soft); }
+.hub-grid-single { grid-template-columns: 1fr; }
+.tag { display: inline-block; padding: 5px 9px; border-radius: 999px; color: var(--gold-dark); background: var(--gold-soft); font-size: 11.52px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.tag.blocked { color: #6f1823; background: #ffeaed; }
+.journey { position: relative; min-height: 255px; margin: 0; padding: 28px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); background: #fff; box-shadow: var(--shadow); text-decoration: none; }
+.journey:hover { transform: translateY(-3px); border-color: var(--gold); }
+.journey .tag { display: inline-block; padding: 5px 9px; border-radius: 999px; color: var(--gold-dark); background: var(--gold-soft); font-size: 11.52px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.journey .tag.blocked { color: #6f1823; background: #ffeaed; }
+.journey h2 { margin: 26px 0 10px; font-size: 26.4px; letter-spacing: -.03em; }
+.journey p { max-width: 420px; color: var(--ink-soft); }
+.journey .arrow { position: absolute; left: 28px; bottom: 25px; color: var(--gold-dark); font-weight: 800; }
+.blocked-panel { border-style: dashed; box-shadow: none; }
+
+.site-footer { padding: 34px 20px 54px; color: #cbc5bf; background: var(--ink); text-align: center; }
+.site-footer a { color: var(--gold-soft); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 680px) {
+  .grid, .choice-grid, .hub-grid, .sidebar { grid-template-columns: 1fr; }
+  .nav-link { display: none; }
+  .hero { padding-top: 45px; }
+  .page-shell { margin-top: -45px; }
+  .package-option { align-items: flex-start; }
+  .package-option .price { white-space: normal; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .journey, .button, .button-secondary { transition: transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease; }
+}
+
+[data-estimate], [data-package-total], [data-top-up-estimate] { display: block; white-space: pre-line; line-height: 1.7; }
+
+[data-config-link="terms"]:not([href]) { color: inherit; text-decoration: none; cursor: inherit; }
+</style>
+<div class="nte-inline-root"><div class="nte-inline-page">
+  <header class="site-header">
+    <nav class="nav"><a class="brand" href="https://www.nationaltransitionevent.com/"><img class="brand-logo" src="https://stevostar1234.github.io/nte-production-forms/assets/nte-logo-white.png" alt="The National Transition Event"></a><a class="nav-link" href="https://www.nationaltransitionevent.com/">nationaltransitionevent.com</a></nav>
+    <div class="hero"><h1>Delivery partner application</h1></div>
+  </header>
+
+  <main class="page-shell">
+    <form class="main-column" data-web-to-lead data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your NTE27 delivery partner application. The NTE team will review it and contact you with the outcome.">
+      <input type="hidden" data-sf-field="Logo_Upload_URL__c">
+      <input type="hidden" value="Delivery Partner Application" data-sf-field="Web_Form_Type__c">
+      <input type="hidden" value="delivery-partner-application-v2" data-sf-field="Form_Version__c">
+      <input type="hidden" data-sf-field="NTE_Event_Code__c">
+      <input type="hidden" data-sf-field="Booking_Reference__c">
+      <input type="hidden" data-combine-fields="partner-first-name,partner-last-name" data-sf-field="Sponsored_Name__c">
+      <input type="hidden" data-switch-copy="partner-day-contact-same" data-copy-when-yes="partner-first-name,partner-last-name" data-copy-when-no="partner-day-first-name,partner-day-last-name" data-copy-mode="combine" data-sf-field="Event_Contact_Name__c">
+      <input type="hidden" data-switch-copy="partner-day-contact-same" data-copy-when-yes="partner-title" data-copy-when-no="partner-day-title" data-sf-field="Event_Contact_Title__c">
+      <input type="hidden" data-switch-copy="partner-day-contact-same" data-copy-when-yes="partner-email" data-copy-when-no="partner-day-email" data-sf-field="Event_Contact_Email__c">
+      <input type="hidden" data-switch-copy="partner-day-contact-same" data-copy-when-yes="partner-phone" data-copy-when-no="partner-day-mobile" data-sf-field="Event_Contact_Mobile__c">
+      <input type="hidden" value="0" data-sf-field="Sponsor_Package_Total__c">
+      <input type="hidden" value="0" data-sf-field="Exhibitor_Space_Price__c">
+      <input type="hidden" value="0" data-sf-field="Power_Socket_Unit_Price__c">
+      <input type="hidden" value="0" data-sf-field="Power_Socket_Total__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Unit_Price__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Total__c">
+      <input type="hidden" value="0" data-sf-field="Included_Staff_Count__c">
+      <input type="hidden" data-copy-value-from="partner-planned-count" data-sf-field="Total_Staff_Count__c">
+      <input type="hidden" value="No" data-sf-field="Additional_Staff_Required__c">
+      <input type="hidden" value="0" data-sf-field="Additional_Staff_Count__c">
+      <input type="hidden" value="0" data-sf-field="Listed_Price_Total__c">
+      <input type="hidden" value="Calculated" data-sf-field="Pricing_Status__c">
+      <input type="hidden" value="NTE27-2026-10-07-VAT" data-sf-field="Pricing_Version__c">
+      <input type="hidden" value="No" data-sf-field="Invoice_Required__c">
+      <input type="hidden" value="" data-sf-field="Payment_Method__c">
+      <input type="hidden" value="No" data-sf-field="Invoice_Requested__c">
+
+      <section class="card">
+        <h2>About NTE27</h2>
+        <p class="lede">NTE27 returns to The Wing at Silverstone on Monday 1 March 2027, following a record-breaking event that welcomed more than 1,200 members of the Armed Forces community, over 200 exhibiting organisations and more than 100 Troops' Track Day supercars last year.</p>
+        <p>Delivered by Mission Community and Mission Motorsport, the ‘National Transition Event’ is the largest event of its kind in the UK connecting businesses, government departments and service charities along with the Armed Forces community. The event brings it all together under one roof in an expo-style format, alongside the much-loved Troops’ Track Day on the GP Circuit.</p>
+        <p>NTE creates meaningful connections, encourages collaboration and develops long lasting relationships, while providing valuable insight, shared experiences and access to opportunities.</p>
+        
+      </section>
+
+      <section class="card">
+        <h2><span class="section-number">1</span>Organisation and applicant</h2>
+        <div class="grid">
+          <div class="field full"><label class="required" for="partner-company">Organisation name as it should appear in marketing</label><input id="partner-company" required autocomplete="organization" data-sf-field="Company"></div>
+          <div class="field"><label class="required" for="partner-first-name">First name</label><input id="partner-first-name" required autocomplete="given-name" data-sf-field="FirstName"></div>
+          <div class="field"><label class="required" for="partner-last-name">Surname</label><input id="partner-last-name" required autocomplete="family-name" data-sf-field="LastName"></div>
+          <div class="field"><label class="required" for="partner-title">Job title</label><input id="partner-title" required autocomplete="organization-title" data-sf-field="Title"></div>
+          <div class="field"><label class="required" for="partner-email">Contact email</label><input id="partner-email" type="email" required autocomplete="email" data-sf-field="Email"></div>
+          <div class="field"><label class="required" for="partner-phone">Contact telephone</label><input id="partner-phone" type="tel" required autocomplete="tel" data-sf-field="Phone"><span class="help">Please provide a mobile number if you will also be the on-the-day contact.</span></div>
+          <div class="field full"><label class="required" for="partner-day-contact-same">Will the applicant be the main contact on the day of NTE27?</label><select id="partner-day-contact-same" required><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+        </div>
+        <div class="conditional" data-conditional-for="partner-day-contact-same" data-conditional-value="No">
+          <h3>Contact on the day of NTE27</h3>
+          <div class="grid">
+            <div class="field"><label class="required" for="partner-day-first-name">First name</label><input id="partner-day-first-name" maxlength="40" data-required-when-visible autocomplete="given-name"></div>
+            <div class="field"><label class="required" for="partner-day-last-name">Surname</label><input id="partner-day-last-name" maxlength="80" data-required-when-visible autocomplete="family-name"></div>
+            <div class="field"><label class="required" for="partner-day-title">Job title</label><input id="partner-day-title" maxlength="128" data-required-when-visible></div>
+            <div class="field"><label class="required" for="partner-day-email">Email address</label><input id="partner-day-email" type="email" maxlength="80" data-required-when-visible></div>
+            <div class="field"><label class="required" for="partner-day-mobile">Mobile phone number</label><input id="partner-day-mobile" type="tel" maxlength="40" data-required-when-visible></div>
+          </div>
+        </div>
+      </section>
+
+<section class="card">
+        <h2><span class="section-number">2</span>Exhibition space</h2>
+        <div class="grid">
+          <div class="field"><label class="required" for="partner-sunday">For garage exhibits and large stands in the halls, setting up between 14:00-18:00 hrs on Sunday is required. Please indicate you are able to do this.</label><select id="partner-sunday" required data-sf-field="Exhibitor_Hall_Schedule__c"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div class="field"><label class="required" for="partner-power">Will you require power on your stand?</label><select id="partner-power" required data-sf-field="Stand_Power__c"><option value="">Select</option><option>Yes</option><option>No</option></select><span class="help">There is no additional charge for this request.</span></div>
+          <div class="field full"><label class="required" for="partner-equipment">Equipment beyond display stands and laptops</label><textarea id="partner-equipment" required placeholder="State None if nothing further" data-sf-field="Stand_Equipment__c"></textarea></div>
+          <div class="field full"><label class="required" for="partner-heavy-vehicle">Will you bring cars, tractors or heavy items that need to be dropped off on a flatbed or trailer?</label><select id="partner-heavy-vehicle" required data-sf-field="Heavy_Vehicle_Required__c"><option value="">Select</option><option>Yes</option><option>No</option><option>Not known yet</option></select></div>
+          <div class="field"><label class="required" for="partner-accessibility">Do you have any accessibility requirements?</label><select id="partner-accessibility" required data-sf-field="Has_Special_Requirements__c"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div class="field conditional" data-conditional-for="partner-accessibility" data-conditional-value="Yes"><label class="required" for="partner-accessibility-details">Accessibility details</label><textarea id="partner-accessibility-details" data-required-when-visible data-sf-field="Stand_Special_Requirements__c"></textarea></div>
+          <div class="field"><label class="required" for="partner-planned-count">How many people do you currently plan to bring, including yourself?</label><input id="partner-planned-count" type="number" min="1" max="99" step="1" inputmode="numeric" required data-sf-field="Planned_Exhibitor_Count__c"><span class="help">Please provide the final names nearer the event using the Partner/Sponsor staff update form, which will be included in your Provisionally Reserved Space email.</span></div>
+          <div class="field full"><label class="required" for="partner-extra-notes">Anything else to share about your space?</label><textarea id="partner-extra-notes" required placeholder="State None if there is nothing further" data-sf-field="Stand_Extra_Notes__c"></textarea></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="section-number">3</span>Administrative details</h2>
+        
+        <div class="grid">
+          
+          
+          
+          <div class="field"><label class="required" for="partner-supplier-agreement">Will a supplier agreement be required?</label><select id="partner-supplier-agreement" required data-sf-field="Supplier_Agreement_Required__c"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div class="field"><label class="required" for="partner-invoice-company">Legal organisation name</label><input id="partner-invoice-company" required data-sf-field="Delivery_Legal_Name__c"></div>
+          <div class="field"><label for="partner-trading-name">Trading name, if different</label><input id="partner-trading-name" data-sf-field="Trading_Name__c"></div>
+          <div class="field full"><label class="required" for="partner-invoice-address">Correspondence address, including postcode</label><textarea id="partner-invoice-address" required data-sf-field="Delivery_Address__c"></textarea></div>
+          
+          <div class="field"><label class="required" for="partner-invoice-person">Administrative contact name</label><input id="partner-invoice-person" required data-sf-field="Delivery_Admin_Name__c"></div>
+          <div class="field"><label class="required" for="partner-invoice-email">Administrative contact email address</label><input id="partner-invoice-email" type="email" required data-sf-field="Delivery_Admin_Email__c"></div>
+          <div class="field"><label class="required" for="partner-invoice-phone">Administrative contact telephone number</label><input id="partner-invoice-phone" type="tel" required data-sf-field="Delivery_Admin_Phone__c"></div>
+          
+          
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="section-number">4</span>Declaration</h2>
+        <div class="grid">
+          <div class="field"><label class="required" for="partner-declaration-name">Digital signature (full name)</label><input id="partner-declaration-name" required autocomplete="name" data-sf-field="Declaration_Name__c"><span class="help">Entering your name confirms that the information supplied is accurate and you have authority to proceed with booking.</span></div>
+          <div class="field"><label for="partner-declaration-date">Date</label><input id="partner-declaration-date" type="date" readonly data-declaration-date></div>
+        </div>
+        <div class="checkline"><input id="delivery-privacy" type="checkbox" value="1" required data-sf-field="NTE_Privacy_Accepted__c"><label for="delivery-privacy">I have read and agree to the <a data-config-link="privacy" target="_blank" rel="noopener">NTE27 Privacy Policy</a>.</label></div>
+        <div class="checkline" data-booking-terms hidden><input id="delivery-terms" type="checkbox" value="1" required disabled data-sf-field="NTE_Booking_Terms_Accepted__c"><label for="delivery-terms">I have read and agree to the <a data-config-link="terms" target="_blank" rel="noopener">NTE27 Terms and Conditions</a>.</label></div>
+        <div class="button-row"><button class="button" type="submit">Submit delivery partner application</button><a class="button-secondary" href="https://www.nationaltransitionevent.com/">Visit the NTE website</a></div><div data-form-status hidden aria-live="polite"></div>
+      </section>
+    </form>
+  </main>
+  <footer class="site-footer">Questions? <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a></footer>
+
+</div></div>
+</template>
+<p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
+</nte-inline-3d5b7217e49a>
+<script>
+(function (nativeWindow, nativeDocument) {
+  "use strict";
+  var tagName = "nte-inline-3d5b7217e49a";
+  if (nativeWindow.customElements.get(tagName)) return;
+
+  class NTEInlineForm extends HTMLElement {
+    connectedCallback() {
+      if (this.shadowRoot) {
+        this.connectListeners();
+        return;
+      }
+      if (!this.querySelector("[data-nte-ready]")) {
+        if (!this.pendingContent) {
+          this.pendingContent = new MutationObserver(() => {
+            if (this.querySelector("[data-nte-ready]")) this.connectedCallback();
+          });
+        }
+        this.pendingContent.observe(this, {childList: true});
+        return;
+      }
+      if (this.pendingContent) this.pendingContent.disconnect();
+      this.windowListeners = [];
+      var host = this;
+      var template = host.querySelector("template[data-nte-content]");
+      var root = host.attachShadow({mode: "open"});
+      root.appendChild(template.content.cloneNode(true));
+      if (host.hasAttribute("data-nte-inter") && !nativeDocument.getElementById("nte-inline-fonts-4da8258efe78")) {
+        var fonts = nativeDocument.createElement("style");
+        fonts.id = "nte-inline-fonts-4da8258efe78";
+        fonts.textContent = "/* cyrillic-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* cyrillic-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 550;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* cyrillic-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 650;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* cyrillic-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 750;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* cyrillic-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;\n}\n/* cyrillic */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+1F00-1FFF;\n}\n/* greek */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;\n}\n/* vietnamese */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');\n  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'NTE Inline Inter';\n  font-style: normal;\n  font-weight: 800;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n";
+        nativeDocument.head.appendChild(fonts);
+      }
+      // Keep the source engine local to this block. Native transport still posts
+      // in the current top-level document, exactly as the standalone form does.
+      var scopedDocument = {
+        body: nativeDocument.body,
+        createElement: nativeDocument.createElement.bind(nativeDocument),
+        querySelector: root.querySelector.bind(root),
+        querySelectorAll: root.querySelectorAll.bind(root),
+        getElementById: root.getElementById.bind(root)
+      };
+      var scopedWindow = {
+        location: nativeWindow.location,
+        crypto: nativeWindow.crypto,
+        addEventListener: function (type, listener, options) {
+          host.windowListeners.push([type, listener, options]);
+          nativeWindow.addEventListener(type, listener, options);
+        }
+      };
+      this.listenersConnected = true;
+      (function (window, document) {
+window.NTE_CONFIG = {
+  "mode": "production",
+  "eventCodeOverride": "",
+  "eventCodeTimeZone": "Europe/London",
+  "salesforceDateFormat": "DMY",
+  "dateOfBirthMinDate": "1900-01-01",
+  "endpoint": "https://missionmotorsportnpc.my.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
+  "orgId": "00Dd3000004vNGv",
+  "returnUrl": "https://stevostar1234.github.io/nte-production-forms/thank-you.html",
+  "privacyUrl": "https://www.nationaltransitionevent.com/privacy",
+  "privacyLinkLabel": "NTE27 Privacy Policy",
+  "termsUrl": "",
+  "termsLinkLabel": "NTE27 Terms and Conditions",
+  "allowUnlinkedTermsForTesting": true,
+  "siteNotice": "",
+  "logoFileRequestUrl": "https://missioncommunityorg.sharepoint.com/:f:/s/MissionCommunity/IgACqM_zXPyfQ6rpuy0q2kTJAZYM8Ny7YDP8_9OO_DGD4tg",
+  "supportEmail": "nte@missioncommunity.org",
+  "fieldLimits": {
+    "Delivery_Legal_Name__c": 200,
+    "Delivery_Address__c": 1000,
+    "Delivery_Admin_Name__c": 200,
+    "Delivery_Admin_Email__c": 80,
+    "Delivery_Admin_Phone__c": 40,
+    "Booking_Reference__c": 80,
+    "Target_Booking_Reference__c": 80,
+    "NTE_Event_Code__c": 20,
+    "Form_Version__c": 80,
+    "Sponsored_Name__c": 200,
+    "Invoiced_Company__c": 200,
+    "Invoice_Address__c": 1000,
+    "Invoiced_Person__c": 200,
+    "Invoiced_Email__c": 80,
+    "Invoice_Contact_Phone__c": 40,
+    "Payment_Method__c": 255,
+    "Trading_Name__c": 255,
+    "Invoice_Additional_Information__c": 32768,
+    "Purchase_Order_Number__c": 100,
+    "Event_Contact_Name__c": 200,
+    "Event_Contact_Title__c": 128,
+    "Event_Contact_Email__c": 80,
+    "Event_Contact_Mobile__c": 40,
+    "Stand_Equipment__c": 1000,
+    "Stand_Special_Requirements__c": 1000,
+    "Staff_Base_Names__c": 32768,
+    "Top_Up_Staff_Names__c": 32768,
+    "Stand_Extra_Notes__c": 1000,
+    "Secondary_Contact_Prefix__c": 40,
+    "Secondary_Contact_Name__c": 200,
+    "Secondary_Contact_Title__c": 128,
+    "Secondary_Contact_Email__c": 80,
+    "Secondary_Contact_Mobile__c": 40,
+    "Secondary_Contact_Phone__c": 40,
+    "Industry_Body_Details__c": 255,
+    "Declaration_Name__c": 200,
+    "Partnership_Interest_Detail__c": 32768,
+    "Exhibitor_Interest_Detail__c": 32768,
+    "Exhibitor_Community_Contribution__c": 32768,
+    "Preferred_Contact_Time__c": 255,
+    "Accompanying_Guest_Name__c": 200,
+    "Accompanying_Guest_Email__c": 80,
+    "Guest_Accessibility_Details__c": 32768,
+    "Logo_Upload_URL__c": 255,
+    "Heavy_Item_1_Description__c": 255,
+    "Heavy_Item_1_Registration__c": 80,
+    "Heavy_Item_1_Dimensions__c": 120,
+    "Heavy_Item_1_Gross_Weight__c": 120,
+    "Heavy_Item_2_Description__c": 255,
+    "Heavy_Item_2_Registration__c": 80,
+    "Heavy_Item_2_Dimensions__c": 120,
+    "Heavy_Item_2_Gross_Weight__c": 120,
+    "Heavy_Item_3_Description__c": 255,
+    "Heavy_Item_3_Registration__c": 80,
+    "Heavy_Item_3_Dimensions__c": 120,
+    "Heavy_Item_3_Gross_Weight__c": 120,
+    "Haulier_Name__c": 255,
+    "Haulier_Staff__c": 32768,
+    "Haulier_Vehicle_Type__c": 255,
+    "Haulier_Vehicle_Gross_Weight__c": 120,
+    "Haulier_Vehicle_Dimensions__c": 120,
+    "Haulier_Vehicle_Registration__c": 80
+  },
+  "customFieldIds": {
+    "Accompanying_Guest_Email__c": "00NRz000009vjEi",
+    "Accompanying_Guest_Name__c": "00NRz000009vjEj",
+    "Additional_Staff_Count__c": "00NRz000009vjEk",
+    "Additional_Staff_Required__c": "00NRz000009vjEl",
+    "Additional_Staff_Total__c": "00NRz000009vjEm",
+    "Additional_Staff_Unit_Price__c": "00NRz000009vjEn",
+    "Booking_Reference__c": "00NRz000009vjEp",
+    "Contact_Consent__c": "00NRz000009vjEq",
+    "Declaration_Name__c": "00NRz000009vjEs",
+    "Delivery_Address__c": "00NRz000009vjEt",
+    "Delivery_Admin_Email__c": "00NRz000009vjEu",
+    "Delivery_Admin_Name__c": "00NRz000009vjEv",
+    "Delivery_Admin_Phone__c": "00NRz000009vjEw",
+    "Delivery_Legal_Name__c": "00NRz000009vjEx",
+    "Delivery_Window__c": "00NRz000009vjEy",
+    "Event_Contact_Email__c": "00NRz000009vjEz",
+    "Event_Contact_Mobile__c": "00NRz000009vjF0",
+    "Event_Contact_Name__c": "00NRz000009vjF1",
+    "Event_Contact_Title__c": "00NRz000009vjF2",
+    "Event_Discovery_Source__c": "00NRz000009vjF3",
+    "Exhibitor_Community_Contribution__c": "00NRz000009vjF4",
+    "Exhibitor_Hall_Schedule__c": "00NRz000009vjF5",
+    "Exhibitor_Interest_Detail__c": "00NRz000009vjF7",
+    "Exhibitor_Organisation_Category__c": "00NRz000009vjF8",
+    "Exhibitor_Space_Price__c": "00NRz000009vjFA",
+    "Exhibitor_Space_Selections__c": "00NRz000009vjFB",
+    "Form_Version__c": "00NRz000009vjFD",
+    "Guest_Accessibility_Details__c": "00NRz000009vjFE",
+    "Guest_Accessibility_Required__c": "00NRz000009vjFF",
+    "Guest_Accompanying__c": "00NRz000009vjFG",
+    "Guest_Information_Declaration__c": "00NRz000009vjFH",
+    "Has_Special_Requirements__c": "00NRz000009vjFI",
+    "Haulier_Name__c": "00NRz000009vjFJ",
+    "Haulier_Staff__c": "00NRz000009vjFK",
+    "Haulier_Vehicle_Dimensions__c": "00NRz000009vjFL",
+    "Haulier_Vehicle_Gross_Weight__c": "00NRz000009vjFM",
+    "Haulier_Vehicle_Registration__c": "00NRz000009vjFN",
+    "Haulier_Vehicle_Type__c": "00NRz000009vjFO",
+    "Heavy_Item_1_Description__c": "00NRz000009vjFP",
+    "Heavy_Item_1_Dimensions__c": "00NRz000009vjFQ",
+    "Heavy_Item_1_Gross_Weight__c": "00NRz000009vjFR",
+    "Heavy_Item_1_Registration__c": "00NRz000009vjFS",
+    "Heavy_Item_2_Description__c": "00NRz000009vjFT",
+    "Heavy_Item_2_Dimensions__c": "00NRz000009vjFU",
+    "Heavy_Item_2_Gross_Weight__c": "00NRz000009vjFV",
+    "Heavy_Item_2_Registration__c": "00NRz000009vjFW",
+    "Heavy_Item_3_Description__c": "00NRz000009vjFX",
+    "Heavy_Item_3_Dimensions__c": "00NRz000009vjFY",
+    "Heavy_Item_3_Gross_Weight__c": "00NRz000009vjFZ",
+    "Heavy_Item_3_Registration__c": "00NRz000009vjFa",
+    "Heavy_Vehicle_Required__c": "00NRz000009vjFb",
+    "Included_Staff_Count__c": "00NRz000009vjFc",
+    "Industry_Body_Details__c": "00NRz000009vjFd",
+    "Invoice_Additional_Information__c": "00NRz000009vjFe",
+    "Invoice_Address__c": "00NRz000009vjFf",
+    "Invoice_Contact_Phone__c": "00NRz000009vjFg",
+    "Invoice_Requested__c": "00NRz000009vjFh",
+    "Invoice_Required__c": "00NRz000009vjFi",
+    "Invoiced_Company__c": "00NRz000009vjFj",
+    "Invoiced_Email__c": "00NRz000009vjFk",
+    "Invoiced_Person__c": "00NRz000009vjFl",
+    "Listed_Price_Total__c": "00NRz000009vjFm",
+    "Logo_Upload_URL__c": "00NRz000009vjFn",
+    "NTE_Booking_Terms_Accepted__c": "00NRz000009vjFq",
+    "NTE_Event_Code__c": "00NRz000009vjFs",
+    "NTE_Privacy_Accepted__c": "00NRz000009vjFz",
+    "Organisation_Type__c": "00NRz000009vjG3",
+    "Partner_Interest_Areas__c": "00NRz000009vjG4",
+    "Partnership_Interest_Detail__c": "00NRz000009vjG6",
+    "Payment_Method__c": "00NRz000009vjG7",
+    "Planned_Exhibitor_Count__c": "00NRz000009vjG8",
+    "Power_Socket_Count__c": "00NRz000009vjG9",
+    "Power_Socket_Total__c": "00NRz000009vjGA",
+    "Power_Socket_Unit_Price__c": "00NRz000009vjGB",
+    "Preferred_Contact_Method__c": "00NRz000009vjGC",
+    "Preferred_Contact_Time__c": "00NRz000009vjGD",
+    "Previous_NTE_Events__c": "00NRz000009vjGE",
+    "Pricing_Status__c": "00NRz000009vjGF",
+    "Pricing_Version__c": "00NRz000009vjGG",
+    "Purchase_Order_Number__c": "00NRz000009vjGH",
+    "Purchase_Order__c": "00NRz000009vjGI",
+    "Quote_Required_for_PO__c": "00NRz000009vjGJ",
+    "Secondary_Contact_Email__c": "00NRz000009vjGK",
+    "Secondary_Contact_Mobile__c": "00NRz000009vjGL",
+    "Secondary_Contact_Name__c": "00NRz000009vjGM",
+    "Secondary_Contact_Phone__c": "00NRz000009vjGN",
+    "Secondary_Contact_Prefix__c": "00NRz000009vjGO",
+    "Secondary_Contact_Title__c": "00NRz000009vjGP",
+    "Sponsor_Package_Total__c": "00NRz000009vjGQ",
+    "Sponsor_Package__c": "00NRz000009vjGR",
+    "Sponsored_Name__c": "00NRz000009vjGS",
+    "Staff_Base_Names__c": "00NRz000009vjGT",
+    "Staff_Update_Audience__c": "00NRz000009vjGU",
+    "Stand_Equipment__c": "00NRz000009vjGW",
+    "Stand_Extra_Notes__c": "00NRz000009vjGX",
+    "Stand_Power__c": "00NRz000009vjGY",
+    "Stand_Special_Requirements__c": "00NRz000009vjGZ",
+    "Supplier_Agreement_Required__c": "00NRz000009vjGa",
+    "Target_Booking_Reference__c": "00NRz000009vjGb",
+    "Top_Up_Staff_Count__c": "00NRz000009vjGd",
+    "Top_Up_Staff_Names__c": "00NRz000009vjGe",
+    "Top_Up_Staff_Required__c": "00NRz000009vjGf",
+    "Top_Up_Staff_Total__c": "00NRz000009vjGg",
+    "Top_Up_Staff_Unit_Price__c": "00NRz000009vjGh",
+    "Total_Staff_Count__c": "00NRz000009vjGj",
+    "Trading_Name__c": "00NRz000009vjGk",
+    "Web_Form_Type__c": "00NRz000009vjGn"
+  }
+};
+
+        window.NTE_CONFIG.returnUrl = host.getAttribute("data-nte-return-url");
+(function () {
+  "use strict";
+
+  var config = window.NTE_CONFIG || window.NTE27_CONFIG || {};
+  var vatRate = 20;
+  var pricingVersion = "NTE27-2026-10-07-VAT";
+  var syncConditionalSections = function () {};
+  var derivedFieldSynchronizers = [];
+  var sponsorPackagePrices = {
+    "Headline Partner": 20000, "Gold Partner": 15000, "Premier Partner": 7000, "Champion Partner": 2000,
+    "Zone Sponsor": 5000, "Community Stage Sponsor": 6000, "Event Guide Sponsor": 5000, "Delegate Tote Bag Sponsor": 5000, "Helmet Bay Sponsor": 3000,
+    "Auditorium Sponsor": 6000, "Wristband Sponsor": 3000
+  };
+  var exhibitorSpacePrices = {
+    "Garage Space - reduced size with power - £599 + VAT": 599,
+    "Single Garage - Paddock Side with power - £799 + VAT": 799,
+    "Double Garage - Paddock Side with power - £1,299 + VAT": 1299,
+    "Single Garage - Track Side - £799 + VAT": 799,
+    "Double Garage - Track Side - £1,299 + VAT": 1299,
+    "Clean Energy Zone - Single - £499 + VAT": 499,
+    "Clean Energy Zone - Double - £849 + VAT": 849,
+    "Built Environment Zone - Single - £499 + VAT": 499,
+    "Built Environment Zone - Double - £849 + VAT": 849,
+    "Manufacturing Zone - Single - £499 + VAT": 499,
+    "Manufacturing Zone - Double - £849 + VAT": 849,
+    "Defence & Security Zone - Single - £499 + VAT": 499,
+    "Defence & Security Zone - Double - £849 + VAT": 849,
+    "Digital and Technologies Zone - Single - £499 + VAT": 499,
+    "Digital and Technologies Zone - Double - £849 + VAT": 849,
+    "FM Zone - Single - £499 + VAT": 499,
+    "FM Zone - Double - £849 + VAT": 849,
+    "Professional & Financial Zone - Single - £499 + VAT": 499,
+    "Professional & Financial Zone - Double - £849 + VAT": 849,
+    "Training & Education Zone - Single - £499 + VAT": 499,
+    "Any other business - Single - £499 + VAT": 499,
+    "Any other business - Double - £849 + VAT": 849,
+    "Local Government Authority - Single - £249.50 + VAT": 249.5,
+    "Blue Light - Single - £249.50 + VAT": 249.5,
+    "Trade Association - Single - £499 + VAT": 499,
+    "COBSEO Charity - Single - Free": 0,
+    "Non COBSEO Charity - Single - Free": 0
+  };
+  var standardNames = {
+    Company: "company",
+    FirstName: "first_name",
+    LastName: "last_name",
+    Email: "email",
+    Phone: "phone",
+    MobilePhone: "mobile",
+    Title: "title",
+    Website: "URL",
+    Salutation: "salutation",
+    Street: "street",
+    PostalCode: "zip"
+  };
+  var standardFieldLimits = {
+    Company: 255,
+    FirstName: 40,
+    LastName: 80,
+    Email: 80,
+    Phone: 40,
+    MobilePhone: 40,
+    Title: 128,
+    Website: 255,
+    Salutation: 40,
+    Street: 255,
+    PostalCode: 20
+  };
+
+  function setStatus(form, message, type) {
+    var status = form.querySelector("[data-form-status]");
+    if (!status) return;
+    status.textContent = message;
+    status.className = "status " + type;
+    status.hidden = false;
+    status.setAttribute("tabindex", "-1");
+    status.focus();
+  }
+
+  function configureShell() {
+    if (config.siteNotice && document.body && document.createElement && !document.querySelector("[data-site-notice]")) {
+      var notice = document.createElement("aside");
+      notice.className = "sandbox-notice";
+      notice.setAttribute("data-site-notice", "");
+      notice.textContent = config.siteNotice;
+      var main = document.querySelector("main");
+      if (main) main.parentNode.insertBefore(notice, main);
+    }
+    document.querySelectorAll("[data-current-year]").forEach(function (node) {
+      node.textContent = String(new Date().getFullYear());
+    });
+    ["privacy", "terms"].forEach(function (kind) {
+      document.querySelectorAll('[data-config-link="' + kind + '"]').forEach(function (link) {
+        if (config[kind + "Url"]) {
+          link.href = config[kind + "Url"];
+          if (config[kind + "LinkLabel"]) link.textContent = config[kind + "LinkLabel"];
+        } else {
+          link.removeAttribute("href");
+          link.setAttribute("aria-disabled", "true");
+          link.addEventListener("click", function (event) { event.preventDefault(); });
+        }
+      });
+    });
+    document.querySelectorAll('[data-booking-terms]').forEach(function (section) {
+      var available = !!config.termsUrl || config.allowUnlinkedTermsForTesting === true;
+      section.hidden = !available;
+      section.querySelectorAll("input").forEach(function (input) { input.disabled = !available; });
+    });
+    document.querySelectorAll('[data-config-link="logo"]').forEach(function (link) {
+      if (config.logoFileRequestUrl) {
+        link.href = config.logoFileRequestUrl;
+        link.removeAttribute("aria-disabled");
+      } else {
+        link.href = "#logo-link-required";
+        link.setAttribute("aria-disabled", "true");
+        link.title = "The secure upload link is not currently available.";
+        link.addEventListener("click", function (event) { event.preventDefault(); });
+      }
+    });
+  }
+
+  function enableConditionalSections() {
+    var targets = Array.prototype.slice.call(document.querySelectorAll("[data-conditional-for]"));
+
+    function syncAll() {
+      targets.forEach(function (target) {
+        var source = document.getElementById(target.dataset.conditionalFor);
+        if (!source) return;
+        var expected = (target.dataset.conditionalValue || "Yes").split("|");
+        var value = source.type === "checkbox" ? (source.checked ? "Yes" : "No") : (source.type === "radio" ? (source.checked ? source.value : "") : source.value);
+        var parentConditional = target.parentElement && target.parentElement.closest("[data-conditional-for]");
+        var show = expected.indexOf(value) !== -1 && (!parentConditional || !parentConditional.hidden);
+        target.hidden = !show;
+        target.querySelectorAll("input, select, textarea, button").forEach(function (control) {
+          if (control.closest("[data-conditional-for]") !== target) return;
+          control.disabled = !show;
+          if (control.hasAttribute("data-required-when-visible")) control.required = show;
+        });
+      });
+    }
+
+    targets.forEach(function (target) {
+      var source = document.getElementById(target.dataset.conditionalFor);
+      if (!source) return;
+      source.addEventListener("change", syncAll);
+      if (source.type === "radio" && source.name) {
+        document.querySelectorAll('input[type="radio"][name="' + source.name + '"]').forEach(function (radio) { radio.addEventListener("change", syncAll); });
+      }
+    });
+    syncConditionalSections = syncAll;
+    syncAll();
+  }
+
+  function configureFieldConstraints() {
+    function applyLimit(control, api) {
+      if (!control || !/^(INPUT|TEXTAREA)$/.test(control.tagName) || /^(checkbox|radio|hidden|number|date)$/i.test(control.type || "")) return;
+      var limit = standardFieldLimits[api] || (config.fieldLimits || {})[api];
+      if (limit && (!control.hasAttribute("maxlength") || control.maxLength > limit)) control.maxLength = limit;
+    }
+    document.querySelectorAll("[data-sf-field]").forEach(function (control) {
+      applyLimit(control, control.dataset.sfField);
+      if (control.dataset.copyValueFrom) applyLimit(document.getElementById(control.dataset.copyValueFrom), control.dataset.sfField);
+    });
+    var londonDateParts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit"
+    }).formatToParts(new Date());
+    var londonDate = ["year", "month", "day"].map(function (partName) {
+      return londonDateParts.find(function (part) { return part.type === partName; }).value;
+    }).join("-");
+    document.querySelectorAll("[data-declaration-date]").forEach(function (control) {
+      control.value = londonDate;
+    });
+    document.querySelectorAll('[data-sf-field="Date_of_Birth__c"]').forEach(function (control) {
+      control.max = londonDate;
+      control.min = config.dateOfBirthMinDate || "1900-01-01";
+    });
+  }
+
+  function enableCheckboxChoices() {
+    document.querySelectorAll("[data-single-choice-group], [data-exclusive-choice]").forEach(function (group) {
+      group.addEventListener("change", function (event) {
+        var selected = event.target;
+        if (!selected || selected.type !== "checkbox" || !selected.checked) return;
+        group.querySelectorAll('input[type="checkbox"]').forEach(function (control) {
+          if (control !== selected && (group.hasAttribute("data-single-choice-group") || selected.value === group.dataset.exclusiveChoice || control.value === group.dataset.exclusiveChoice)) {
+            control.checked = false;
+          }
+        });
+      });
+    });
+  }
+
+  function validateCheckboxChoices(form) {
+    var invalid = Array.prototype.slice.call(form.querySelectorAll("[data-single-choice-group], [data-exclusive-choice]")).find(function (group) {
+      var selected = Array.prototype.slice.call(group.querySelectorAll('input[type="checkbox"]:checked')).filter(function (control) { return !control.disabled; });
+      return selected.length > 1 && (group.hasAttribute("data-single-choice-group") || selected.some(function (control) { return control.value === group.dataset.exclusiveChoice; }));
+    });
+    if (!invalid) return true;
+    return setRuleError(form, invalid.querySelector('input[type="checkbox"]'), invalid.hasAttribute("data-single-choice-group")
+      ? "Please select one hours option."
+      : "Please select Any or your preferred days.");
+  }
+
+  function syncCombinedFields(form) {
+    form.querySelectorAll("[data-combine-fields]").forEach(function (target) {
+      var ids = target.dataset.combineFields.split(",");
+      target.value = ids.map(function (id) {
+        var source = document.getElementById(id.trim());
+        return source && !source.disabled ? source.value.trim() : "";
+      }).filter(Boolean).join(" ");
+    });
+    form.querySelectorAll("[data-copy-value-from]").forEach(function (target) {
+      var source = document.getElementById(target.dataset.copyValueFrom);
+      target.value = source && !source.disabled ? source.value : "";
+    });
+    form.querySelectorAll("[data-checkbox-copy-from]").forEach(function (target) {
+      var source = document.getElementById(target.dataset.checkboxCopyFrom);
+      var selected = source && !source.disabled && (source.type === "checkbox" ? source.checked : source.value === "Yes");
+      target.value = selected ? "1" : "";
+    });
+    form.querySelectorAll("[data-switch-copy]").forEach(function (target) {
+      var switcher = document.getElementById(target.dataset.switchCopy);
+      var sourceList = switcher && switcher.value === "No" ? target.dataset.copyWhenNo : target.dataset.copyWhenYes;
+      var values = (sourceList || "").split(",").map(function (id) {
+        var source = document.getElementById(id.trim());
+        return source && !source.disabled ? source.value.trim() : "";
+      }).filter(Boolean);
+      target.value = target.dataset.copyMode === "combine" ? values.join(" ") : (values[0] || "");
+    });
+  }
+
+  function eventCodeFromParts(year, month) {
+    return "NTE" + String(month >= 4 ? year + 1 : year);
+  }
+
+  function pureDateParts(value) {
+    var match = typeof value === "string" && /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) return null;
+    var year = Number(match[1]);
+    var month = Number(match[2]);
+    var day = Number(match[3]);
+    var check = new Date(Date.UTC(year, month - 1, day));
+    if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) {
+      throw new RangeError("Invalid calendar date: " + value);
+    }
+    return {year: year, month: month, day: day};
+  }
+
+  function eventCodeFor(date, timeZone) {
+    var pureDate = pureDateParts(date);
+    if (pureDate) return eventCodeFromParts(pureDate.year, pureDate.month);
+
+    var instant = date == null ? new Date() : date;
+    if (!(instant instanceof Date) || Number.isNaN(instant.getTime())) {
+      throw new TypeError("eventCodeFor requires a valid Date or YYYY-MM-DD value");
+    }
+    var parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: timeZone || "Europe/London",
+      year: "numeric",
+      month: "numeric"
+    }).formatToParts(instant);
+    var year = Number(parts.find(function (part) { return part.type === "year"; }).value);
+    var month = Number(parts.find(function (part) { return part.type === "month"; }).value);
+    return eventCodeFromParts(year, month);
+  }
+
+  function resolveEventCode(date) {
+    var override = String(config.eventCodeOverride || "").trim();
+    if (override) {
+      if (!/^NTE\d{4}$/.test(override)) throw new Error("NTE event code override must use the format NTEYYYY");
+      return override;
+    }
+    return eventCodeFor(date, config.eventCodeTimeZone || "Europe/London");
+  }
+
+  function bookingReference() {
+    var alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    var bytes = new Uint8Array(8);
+    if (window.crypto && window.crypto.getRandomValues) {
+      window.crypto.getRandomValues(bytes);
+    } else {
+      bytes.forEach(function (_, index) { bytes[index] = Math.floor(Math.random() * 256); });
+    }
+    var suffix = Array.prototype.map.call(bytes, function (value) {
+      return alphabet.charAt(value % alphabet.length);
+    }).join("");
+    return "NTE-" + Date.now() + "-" + suffix;
+  }
+
+  function populateSystemFields(form) {
+    var typeField = form.querySelector('[data-sf-field="Web_Form_Type__c"]');
+    if (typeField && (typeField.value === "Exhibitor Application" || typeField.value === "Partner / Sponsor Application")) {
+      setPricingField(form, "Payment_Method__c", typeField.value === "Exhibitor Application" ? "Stripe" : "Manual");
+      setPricingField(form, "Invoice_Requested__c", typeField.value === "Exhibitor Application" ? "No" : "Yes");
+    }
+    var eventField = form.querySelector('[data-sf-field="NTE_Event_Code__c"]');
+    if (eventField) eventField.value = resolveEventCode(new Date());
+    var bookingField = form.querySelector('[data-sf-field="Booking_Reference__c"]');
+    if (bookingField && !bookingField.value) bookingField.value = bookingReference();
+    var logoField = form.querySelector('[data-sf-field="Logo_Upload_URL__c"]');
+    if (logoField) logoField.value = config.logoFileRequestUrl || "";
+  }
+
+  function setPricingField(form, api, value) {
+    var field = form.querySelector('[data-sf-field="' + api + '"]');
+    if (field) field.value = String(value);
+  }
+
+  function catalogPrice(rawPrice) {
+    var value = typeof rawPrice === "string" || typeof rawPrice === "number" ? String(rawPrice).trim() : "";
+    if (!/^\d+(?:\.\d{1,2})?$/.test(value) || !Number.isSafeInteger(Math.round(Number(value) * 100))) {
+      throw new RangeError("The price for a selected option is unavailable. Refresh the page and try again.");
+    }
+    return Number(value);
+  }
+
+  function vatTotals(net) {
+    var netPence = Math.round(Number(net) * 100);
+    if (!Number.isSafeInteger(netPence) || netPence < 0) throw new RangeError("The total price is unavailable.");
+    var vatPence = Math.round(netPence * vatRate / 100);
+    return {net: netPence / 100, vat: vatPence / 100, gross: (netPence + vatPence) / 100};
+  }
+
+  function totalText(net) {
+    var totals = vatTotals(net);
+    var money = new Intl.NumberFormat("en-GB", {style: "currency", currency: "GBP"});
+    return money.format(totals.net) + " + " + money.format(totals.vat) + " VAT (" + vatRate + "%)\nTotal " + money.format(totals.gross) + " including VAT";
+  }
+
+  function calculatePartnerPricing(selectedPrices) {
+    var totalPence = selectedPrices.reduce(function (sum, rawPrice) { return sum + Math.round(catalogPrice(rawPrice) * 100); }, 0);
+    if (!Number.isSafeInteger(totalPence)) throw new RangeError("The package price is unavailable. Refresh the page and try again.");
+    var total = totalPence / 100;
+    return {packageTotal: total, total: total};
+  }
+
+  function qualifiesForPowerDiscount(category) {
+    return ["Charity - member of Cobseo", "Charity - not a member of Cobseo", "Government or Government Agency", "Local Government or LG related", "Employer - Blue Light & NHS"].indexOf(String(category || "")) !== -1;
+  }
+
+  function includedStaffForSpace(spaceName) {
+    var value = String(spaceName || "");
+    if (!value) return null;
+    var knownFixedSpace = Object.prototype.hasOwnProperty.call(exhibitorSpacePrices, value);
+    if (!knownFixedSpace) return null;
+    if (/Double Garage| - Double -/.test(value)) return 4;
+    return 2;
+  }
+
+  function calculateExhibitorPricing(options) {
+    options = options || {};
+    var spacePrice = catalogPrice(options.spacePrice);
+    var discounted = qualifiesForPowerDiscount(options.category);
+    function wholeCount(value, label, maximum) {
+      var count = value == null || value === "" ? 0 : Number(value);
+      if (!Number.isInteger(count) || count < 0 || count > maximum) throw new RangeError("Enter a whole number of " + label + " between 0 and " + maximum + ".");
+      return count;
+    }
+    var socketCount = options.powerRequired === "Yes" ? wholeCount(options.socketCount, "sockets", 20) : 0;
+    var plannedStaffCount = wholeCount(options.plannedStaffCount, "staff", 99);
+    var includedStaffCount = wholeCount(options.includedStaffCount, "included staff", 99);
+    var hasAllocation = options.includedStaffCount != null && Number.isFinite(plannedStaffCount) && plannedStaffCount > 0
+      && Number.isFinite(includedStaffCount) && includedStaffCount >= 0;
+    var staffCount = hasAllocation
+      ? Math.max(0, plannedStaffCount - includedStaffCount)
+      : wholeCount(options.staffCount, "additional staff", 99);
+    var powerUnitPrice = options.powerRequired === "Yes" ? (discounted ? 50 : 100) : 0;
+    var staffUnitPrice = staffCount > 0 ? 50 : 0;
+    var powerTotal = powerUnitPrice * socketCount;
+    var staffTotal = staffUnitPrice * staffCount;
+    var listedTotal = spacePrice + powerTotal + staffTotal;
+    return {
+      spacePrice: spacePrice,
+      powerUnitPrice: powerUnitPrice,
+      powerTotal: powerTotal,
+      staffUnitPrice: staffUnitPrice,
+      staffTotal: staffTotal,
+      includedStaffCount: hasAllocation ? includedStaffCount : null,
+      additionalStaffCount: staffCount,
+      total: listedTotal,
+      discounted: discounted,
+      invoiceRequired: listedTotal > 0
+    };
+  }
+
+  function setupPackageSummary() {
+    var checkboxes = Array.prototype.slice.call(document.querySelectorAll("[data-package-price]"));
+    var countNode = document.querySelector("[data-package-count]");
+    var totalNode = document.querySelector("[data-package-total]");
+    if (!checkboxes.length || !countNode || !totalNode) return;
+    function sync() {
+      var selected = checkboxes.filter(function (box) { return box.checked; });
+      countNode.textContent = selected.length ? selected.length + " package" + (selected.length === 1 ? "" : "s") + " selected" : "No packages selected";
+      var form = checkboxes[0].form;
+      var pricing;
+      try {
+        pricing = calculatePartnerPricing(selected.map(packagePrice));
+      } catch (error) {
+        totalNode.textContent = error.message;
+        if (form) {
+          setPricingField(form, "Sponsor_Package_Total__c", "");
+          setPricingField(form, "Listed_Price_Total__c", "");
+          setPricingField(form, "Pricing_Status__c", "Review required");
+        }
+        return;
+      }
+      totalNode.textContent = totalText(pricing.total);
+      if (form) {
+        setPricingField(form, "Sponsor_Package_Total__c", pricing.packageTotal);
+        setPricingField(form, "Listed_Price_Total__c", pricing.total);
+        setPricingField(form, "Pricing_Status__c", "Calculated");
+        setPricingField(form, "Pricing_Version__c", pricingVersion);
+      }
+    }
+    checkboxes.forEach(function (box) { box.addEventListener("change", sync); });
+    derivedFieldSynchronizers.push(sync);
+    sync();
+  }
+
+  function setupExhibitorEstimate() {
+    var form = document.querySelector('[data-form-kind="exhibitor"]');
+    if (!form) return;
+    var output = document.querySelector("[data-estimate]");
+    function checkedValue(name) {
+      var node = form.querySelector('[name="' + name + '"]:checked');
+      return node ? node.value : "";
+    }
+    function sync() {
+      var category = document.getElementById("organisation-category");
+      var space = form.querySelector('[name="exhibitor-space"]:checked');
+      var complimentaryBenefits = form.querySelector('[data-complimentary-benefits]');
+      if (complimentaryBenefits) complimentaryBenefits.hidden = !space || !/^(?:COBSEO|Non COBSEO) Charity - Single - Free$/.test(space.value);
+      var savings = form.querySelector('[data-discount-savings]');
+      if (savings) { savings.hidden = true; savings.textContent = ""; }
+      var powerIncluded = space && space.dataset.powerIncluded === "true";
+      var powerLabel = document.getElementById("power-question-label");
+      var powerHelp = document.getElementById("power-question-help");
+      if (powerLabel) powerLabel.textContent = powerIncluded ? "Do you need any additional power sockets for £100 + VAT per socket?" : "Do you need power on your stand for an additional £100 + VAT per socket?";
+      if (powerHelp) powerHelp.textContent = powerIncluded ? "Your selected space includes standard power. Select Yes only if you need additional sockets. Charities, government and blue light organisations qualify for a 50% discount on additional sockets." : "Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.";
+      var socketCount = Number((document.getElementById("power-count") || {}).value || 0);
+      var plannedStaffCount = Number((document.getElementById("planned-count") || {}).value || 0);
+      var includedStaffCount = space ? includedStaffForSpace(space.value) : null;
+      var pricing;
+      try {
+        if (space && includedStaffCount == null) throw new RangeError("This space is unavailable. Refresh the page and choose another space.");
+        pricing = calculateExhibitorPricing({
+          spacePrice: space ? exhibitorSpacePrice(space) : 0,
+          category: category ? category.value : "",
+          powerRequired: checkedValue("power-required"),
+          socketCount: socketCount,
+          plannedStaffCount: plannedStaffCount,
+          includedStaffCount: includedStaffCount
+        });
+      } catch (error) {
+        if (output) output.textContent = error.message;
+        setPricingField(form, "Exhibitor_Space_Price__c", "");
+        setPricingField(form, "Listed_Price_Total__c", "");
+        setPricingField(form, "Pricing_Status__c", "Review required");
+        return;
+      }
+      var total = pricing.total;
+      setPricingField(form, "Exhibitor_Space_Price__c", pricing.spacePrice);
+      setPricingField(form, "Power_Socket_Unit_Price__c", pricing.powerUnitPrice);
+      setPricingField(form, "Power_Socket_Total__c", pricing.powerTotal);
+      setPricingField(form, "Additional_Staff_Unit_Price__c", pricing.staffUnitPrice);
+      setPricingField(form, "Additional_Staff_Total__c", pricing.staffTotal);
+      setPricingField(form, "Included_Staff_Count__c", pricing.includedStaffCount == null ? 0 : pricing.includedStaffCount);
+      setPricingField(form, "Total_Staff_Count__c", plannedStaffCount || 0);
+      setPricingField(form, "Additional_Staff_Required__c", pricing.additionalStaffCount > 0 ? "Yes" : "No");
+      setPricingField(form, "Additional_Staff_Count__c", pricing.additionalStaffCount);
+      setPricingField(form, "Listed_Price_Total__c", pricing.total);
+      setPricingField(form, "Pricing_Status__c", "Calculated");
+      setPricingField(form, "Pricing_Version__c", pricingVersion);
+      var invoiceField = document.getElementById("invoice-required");
+      if (invoiceField) {
+        var invoiceValue = pricing.invoiceRequired ? "Yes" : "No";
+        if (invoiceField.value !== invoiceValue) {
+          invoiceField.value = invoiceValue;
+          invoiceField.dispatchEvent(new Event("change", {bubbles: true}));
+        }
+      }
+      var declarationNumber = document.getElementById("declaration-number");
+      if (declarationNumber) declarationNumber.textContent = pricing.invoiceRequired ? "8" : "7";
+      if (output) {
+        output.textContent = space ? totalText(total) : "Select a space to see your total including VAT.";
+      }
+
+      if (savings && space) {
+        var halfPriceSpace = /^(?:Local Government Authority|Blue Light) - Single - /.test(space.value);
+        var spaceSaving = halfPriceSpace ? exhibitorSpacePrices["Any other business - Single - £499 + VAT"] - pricing.spacePrice : 0;
+        var powerSaving = pricing.discounted && pricing.powerTotal > 0 ? socketCount * 100 - pricing.powerTotal : 0;
+        var savingTotal = spaceSaving + powerSaving;
+        if (savingTotal > 0) {
+          var money = new Intl.NumberFormat("en-GB", {style:"currency",currency:"GBP"});
+          savings.textContent = "50% discount applied: you save " + money.format(vatTotals(savingTotal).gross) + " including VAT on " + (spaceSaving > 0 && powerSaving > 0 ? "your space and power sockets." : spaceSaving > 0 ? "your space." : "power sockets.");
+          savings.hidden = false;
+        }
+      }
+    }
+    form.addEventListener("change", sync);
+    form.addEventListener("input", sync);
+    derivedFieldSynchronizers.push(sync);
+    sync();
+  }
+
+  function setupStaffUpdates() {
+    var form = document.querySelector('[data-form-kind="exhibitor-staff-update"]');
+    if (!form) return;
+    function sync() {
+      var required = (document.getElementById("top-up-required") || {}).value === "Yes";
+      var count = required ? Number((document.getElementById("top-up-count") || {}).value || 0) : 0;
+      setPricingField(form, "Top_Up_Staff_Unit_Price__c", count > 0 ? 50 : 0);
+      setPricingField(form, "Top_Up_Staff_Total__c", count > 0 ? count * 50 : 0);
+      var estimate = document.querySelector("[data-top-up-estimate]");
+      if (estimate) estimate.textContent = totalText(count * 50);
+    }
+    form.addEventListener("change", sync);
+    form.addEventListener("input", sync);
+    derivedFieldSynchronizers.push(sync);
+    sync();
+  }
+
+  function collectFields(form) {
+    syncCombinedFields(form);
+    var grouped = {};
+    form.querySelectorAll("[data-sf-field]").forEach(function (control) {
+      if (control.disabled) return;
+      var api = control.dataset.sfField;
+      if (!api) return;
+      if ((control.type === "checkbox" || control.type === "radio") && !control.checked) return;
+      var value = control.value;
+      if (typeof value === "string") value = value.trim();
+      if (control.type === "date") value = formatWebToLeadDate(value);
+      if (value === "") return;
+      if (!grouped[api]) grouped[api] = [];
+      grouped[api].push(value);
+    });
+    return grouped;
+  }
+
+  function hasBlankRequiredText(form) {
+    var blank = Array.prototype.slice.call(form.querySelectorAll("input[required], textarea[required]")).find(function (control) {
+      if (control.disabled || control.type === "checkbox" || control.type === "radio") return false;
+      return String(control.value || "").trim() === "";
+    });
+    if (!blank) return false;
+    setStatus(form, "Please complete the highlighted required fields.", "error");
+    blank.setCustomValidity("Please enter a value.");
+    blank.reportValidity();
+    blank.focus();
+    return true;
+  }
+
+  function normalizeBookingReferences(form) {
+    form.querySelectorAll('[data-sf-field="Target_Booking_Reference__c"], [data-sf-field="Booking_Reference__c"]').forEach(function (control) {
+      control.value = String(control.value || "").trim().toUpperCase();
+    });
+  }
+
+  function validateBookingReferences(form) {
+    var invalid = Array.prototype.slice.call(form.querySelectorAll('[data-sf-field="Target_Booking_Reference__c"], [data-sf-field="Booking_Reference__c"]')).find(function (control) {
+      return !control.disabled && control.value && !/^NTE-[A-Z0-9][A-Z0-9-]{1,74}[A-Z0-9]$/.test(control.value);
+    });
+    if (!invalid) return true;
+    return setRuleError(form, invalid.type === "hidden" ? null : invalid, invalid.type === "hidden"
+      ? "Your booking reference could not be created. Reload the page and try again."
+      : "Enter the full booking reference beginning NTE- from your confirmation email.");
+  }
+
+  function validateFieldLengths(form) {
+    var invalid = Array.prototype.slice.call(form.querySelectorAll("input, textarea")).find(function (control) {
+      if (control.disabled || /^(checkbox|radio|number|date)$/.test(control.type || "")) return false;
+      var limit = control.maxLength > -1 ? control.maxLength : standardFieldLimits[control.dataset.sfField] || (config.fieldLimits || {})[control.dataset.sfField];
+      return limit && String(control.value || "").trim().length > limit;
+    });
+    if (!invalid) return true;
+    var limit = invalid.maxLength > -1 ? invalid.maxLength : standardFieldLimits[invalid.dataset.sfField] || (config.fieldLimits || {})[invalid.dataset.sfField];
+    var visible = invalid.type === "hidden" ? document.getElementById(invalid.dataset.copyValueFrom || "") : invalid;
+    return setRuleError(form, visible, "Please shorten this value to " + limit + " characters or fewer.");
+  }
+
+  function validateEmailAddresses(form) {
+    var invalid = Array.prototype.slice.call(form.querySelectorAll('input[type="email"]')).find(function (control) {
+      var value = String(control.value || "").trim();
+      return !control.disabled && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    });
+    return !invalid || setRuleError(form, invalid, "Enter a complete email address, such as name@example.com.");
+  }
+
+  function formatWebToLeadDate(value) {
+    var match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match || config.salesforceDateFormat !== "DMY") return value;
+    return match[3] + "/" + match[2] + "/" + match[1];
+  }
+
+  function setRuleError(form, control, message) {
+    setStatus(form, message, "error");
+    if (control) {
+      control.setCustomValidity(message);
+      control.reportValidity();
+      control.focus();
+    }
+    return false;
+  }
+
+  function validateCatalogPricing(form) {
+    try {
+      var space = form.querySelector('[name="exhibitor-space"]:checked');
+      if (space) {
+        exhibitorSpacePrice(space);
+        if (includedStaffForSpace(space.value) == null) {
+          throw new RangeError("This space is unavailable. Refresh the page and choose another space.");
+        }
+      }
+      var packages = Array.prototype.slice.call(form.querySelectorAll('[data-sf-field="Sponsor_Package__c"]:checked'));
+      calculatePartnerPricing(packages.map(packagePrice));
+    } catch (error) {
+      return setRuleError(form, null, error.message);
+    }
+    return true;
+  }
+
+  function exhibitorSpacePrice(space) {
+    var price = catalogPrice(space.dataset.price);
+    if (!Object.prototype.hasOwnProperty.call(exhibitorSpacePrices, space.value) || exhibitorSpacePrices[space.value] !== price) {
+      throw new RangeError("This space is unavailable. Refresh the page and choose another space.");
+    }
+    return price;
+  }
+
+  function packagePrice(box) {
+    var price = catalogPrice(box.dataset.packagePrice);
+    if (!Object.prototype.hasOwnProperty.call(sponsorPackagePrices, box.value) || sponsorPackagePrices[box.value] !== price) {
+      throw new RangeError("This package is unavailable. Refresh the page and choose another package.");
+    }
+    return price;
+  }
+
+  function validateStaffUpdate(form) {
+    if (form.dataset.formKind === "partner-staff-update") {
+      var partnerTotalControl = document.getElementById("partner-staff-total");
+      var partnerTotal = Number(partnerTotalControl && partnerTotalControl.value);
+      if (!Number.isInteger(partnerTotal) || partnerTotal < 1 || partnerTotal > 99) {
+        return setRuleError(form, partnerTotalControl, "Enter a whole number between 1 and 99 for the final number attending.");
+      }
+    }
+    if (form.dataset.formKind === "exhibitor-staff-update") {
+      var baseNamesControl = document.getElementById("exhibitor-staff-names");
+      var topUpRequired = (document.getElementById("top-up-required") || {}).value === "Yes";
+      if (topUpRequired) {
+        var topUpCountControl = document.getElementById("top-up-count");
+        var topUpNamesControl = document.getElementById("top-up-names");
+        var topUpCount = Number((topUpCountControl || {}).value);
+        if (!Number.isInteger(topUpCount) || topUpCount < 1 || topUpCount > 99) {
+          return setRuleError(form, topUpCountControl, "Enter a whole number between 1 and 99 for the top-up places.");
+        }
+        var combinedNames = [String((baseNamesControl || {}).value || "").trim(), String((topUpNamesControl || {}).value || "").trim()].filter(Boolean).join("\n");
+        if (combinedNames.length > 32768) return setRuleError(form, topUpNamesControl, "Please shorten the combined staff lists to 32768 characters or fewer.");
+      }
+    }
+    return true;
+  }
+
+  function validateHeavyItems(form) {
+    if (!form.querySelector("#item1-description")) return true;
+    for (var itemNumber = 2; itemNumber <= 3; itemNumber++) {
+      var description = document.getElementById("item" + itemNumber + "-description");
+      var registration = document.getElementById("item" + itemNumber + "-registration");
+      var dimensions = document.getElementById("item" + itemNumber + "-dimensions");
+      var weight = document.getElementById("item" + itemNumber + "-weight");
+      var controls = [description, registration, dimensions, weight];
+      var hasAnyValue = controls.some(function (control) { return control && String(control.value || "").trim(); });
+      if (hasAnyValue && (!String(description.value || "").trim() || !String(dimensions.value || "").trim() || !String(weight.value || "").trim())) {
+        return setRuleError(form, !String(description.value || "").trim() ? description : (!String(dimensions.value || "").trim() ? dimensions : weight),
+          "Each additional item needs a description, dimensions and gross weight.");
+      }
+      if (itemNumber === 3 && hasAnyValue && !String((document.getElementById("item2-description") || {}).value || "").trim()) {
+        return setRuleError(form, document.getElementById("item2-description"), "Enter item 2 before adding item 3.");
+      }
+    }
+    return true;
+  }
+
+  function missingFieldIds(grouped) {
+    return Object.keys(grouped).filter(function (api) {
+      return /__c$/.test(api) && !(config.customFieldIds || {})[api];
+    });
+  }
+
+  function missingProductionConfig(form) {
+    var missing = [];
+    if (!config.endpoint) missing.push("Salesforce endpoint");
+    if (!config.orgId) missing.push("Salesforce organisation ID");
+    if (!resolveReturnUrl(form)) missing.push("post-submission return URL");
+    if (form.querySelector('[data-config-link="privacy"]') && !config.privacyUrl) missing.push("Privacy Policy URL");
+    if (config.mode === "production" && form.querySelector('[data-booking-terms]') && !config.termsUrl && config.allowUnlinkedTermsForTesting !== true) missing.push("Terms and Conditions URL");
+    return missing;
+  }
+
+  function resolveReturnUrl(form) {
+    var requestedPath = String((form && form.dataset.returnPath) || "").trim();
+    if (!requestedPath) return config.returnUrl || "";
+    try {
+      if (!window.location || !window.location.href) return config.returnUrl || "";
+      var current = new URL(window.location.href);
+      var resolved = new URL(requestedPath, current.href);
+      if (!/^https?:$/.test(resolved.protocol) || resolved.origin !== current.origin) return config.returnUrl || "";
+      return resolved.href;
+    } catch (error) {
+      return config.returnUrl || "";
+    }
+  }
+
+  function submitToSalesforce(form, grouped) {
+    var postForm = document.createElement("form");
+    postForm.method = "post";
+    postForm.action = config.endpoint;
+    postForm.acceptCharset = "UTF-8";
+    postForm.hidden = true;
+    function append(name, value) {
+      var input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      postForm.appendChild(input);
+    }
+    append("oid", config.orgId);
+    append("retURL", resolveReturnUrl(form));
+    append("lead_source", form.dataset.leadSource || "Web");
+    append("useDefaultRule", form.dataset.useDefaultRule === "0" ? "0" : "1");
+    Object.keys(grouped).forEach(function (api) {
+      var name = /__c$/.test(api) ? config.customFieldIds[api] : (standardNames[api] || api);
+      append(name, grouped[api].join(";"));
+    });
+    document.body.appendChild(postForm);
+    try {
+      postForm.submit();
+    } catch (error) {
+      postForm.remove();
+      throw error;
+    }
+  }
+
+  function syncFormState(form) {
+    configureFieldConstraints();
+    syncConditionalSections();
+    form.querySelectorAll('input[type="number"]').forEach(function (control) {
+      if (control.disabled || !String(control.value || "").trim()) return;
+      var value = Number(control.value);
+      if (Number.isFinite(value)) control.value = String(value);
+    });
+    derivedFieldSynchronizers.forEach(function (sync) { sync(); });
+    syncConditionalSections();
+    syncCombinedFields(form);
+    normalizeBookingReferences(form);
+  }
+
+  function clearRuleErrors(form) {
+    form.querySelectorAll("input, select, textarea").forEach(function (control) { control.setCustomValidity(""); });
+  }
+
+  function restoreSubmitControls(form) {
+    delete form.dataset.submitting;
+    form.removeAttribute("aria-busy");
+    form.querySelectorAll('[type="submit"]').forEach(function (button) {
+      if (button.dataset.originalText == null) return;
+      button.disabled = false;
+      button.textContent = button.dataset.originalText;
+      delete button.dataset.originalText;
+    });
+  }
+
+  function enableForms() {
+    document.querySelectorAll("form[data-web-to-lead]").forEach(function (form) {
+      // Normalise references and refresh conditional requirements before asking
+      // the browser to validate; reportValidity still enforces native rules.
+      form.noValidate = true;
+      var validateCodeOfConduct = setupCodeOfConduct(form);
+      try {
+        populateSystemFields(form);
+      } catch (error) {
+        setStatus(form, "This form is currently unavailable. Reload the page and try again.", "error");
+      }
+      var honeypot = document.createElement("input");
+      honeypot.type = "text";
+      honeypot.name = "website_confirm";
+      honeypot.tabIndex = -1;
+      honeypot.autocomplete = "off";
+      honeypot.setAttribute("aria-hidden", "true");
+      honeypot.style.position = "absolute";
+      honeypot.style.left = "-10000px";
+      honeypot.style.width = "1px";
+      honeypot.style.height = "1px";
+      honeypot.dataset.formHoneypot = "";
+      form.appendChild(honeypot);
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (form.dataset.submitting === "true") return;
+        if (honeypot.value) {
+          setStatus(form, "Your submission could not be processed. Please reload the page and try again.", "error");
+          return;
+        }
+        clearRuleErrors(form);
+        try {
+          populateSystemFields(form);
+          syncFormState(form);
+        } catch (error) {
+          setStatus(form, "This form is currently unavailable. Reload the page and try again.", "error");
+          return;
+        }
+        var incompleteGroup = Array.prototype.slice.call(form.querySelectorAll("[data-required-checkbox-group]")).find(function (group) {
+          var available = Array.prototype.slice.call(group.querySelectorAll('input[type="checkbox"]')).filter(function (control) { return !control.disabled; });
+          return available.length && !available.some(function (control) { return control.checked; });
+        });
+        if (incompleteGroup) {
+          setStatus(form, incompleteGroup.dataset.requiredMessage || "Please select at least one option.", "error");
+          var firstBox = incompleteGroup.querySelector('input[type="checkbox"]');
+          if (firstBox) firstBox.focus();
+          return;
+        }
+        if (hasBlankRequiredText(form)) return;
+        if (!validateCheckboxChoices(form)) return;
+        if (!validateCodeOfConduct()) return;
+        if (!validateFieldLengths(form) || !validateEmailAddresses(form) || !validateBookingReferences(form) || !validateCatalogPricing(form) || !validateStaffUpdate(form) || !validateHeavyItems(form)) return;
+        if (!form.checkValidity()) {
+          setStatus(form, "Please complete the highlighted required fields.", "error");
+          form.reportValidity();
+          return;
+        }
+        var grouped = collectFields(form);
+        var missing = missingFieldIds(grouped);
+        if (config.mode === "review") {
+          var confirmation = form.dataset.confirmationPreview || "Thank you. We have received your submission.";
+          var reference = grouped.Booking_Reference__c && grouped.Booking_Reference__c[0];
+          if (reference) confirmation += " Your booking reference is " + reference + ".";
+          setStatus(form, confirmation, "success");
+          return;
+        }
+        var missingConfig = missingProductionConfig(form);
+        if (missingConfig.length) {
+          setStatus(form, "This form is currently unavailable. Please try again later.", "error");
+          return;
+        }
+        if (missing.length) {
+          setStatus(form, "This form is currently unavailable. Please try again later.", "error");
+          return;
+        }
+        form.dataset.submitting = "true";
+        form.setAttribute("aria-busy", "true");
+        form.querySelectorAll('[type="submit"]').forEach(function (button) {
+          button.disabled = true;
+          button.dataset.originalText = button.textContent;
+          button.textContent = "Submitting…";
+        });
+        try {
+          submitToSalesforce(form, grouped);
+        } catch (error) {
+          restoreSubmitControls(form);
+          setStatus(form, "Your submission could not be sent. Please try again.", "error");
+        }
+      });
+      function changed() {
+        clearRuleErrors(form);
+        syncCombinedFields(form);
+      }
+      form.addEventListener("input", changed);
+      form.addEventListener("change", changed);
+      form.addEventListener("focusin", function (event) {
+        if (event.target && event.target.type === "date") configureFieldConstraints();
+      });
+    });
+    if (window.addEventListener) window.addEventListener("pageshow", function (event) {
+      configureFieldConstraints();
+      document.querySelectorAll("form[data-web-to-lead]").forEach(function (form) {
+        var wasSubmitting = form.dataset.submitting === "true";
+        if (wasSubmitting && !event.persisted) return;
+        clearRuleErrors(form);
+        try {
+          // Returning to a submitted application starts a new submission. A
+          // synchronous transport failure has already cleared the busy state.
+          var bookingField = form.querySelector('input[type="hidden"][data-sf-field="Booking_Reference__c"]');
+          if (wasSubmitting && bookingField && !form.querySelector('[data-sf-field="Target_Booking_Reference__c"]')) {
+            bookingField.value = bookingReference();
+          }
+          populateSystemFields(form);
+          syncFormState(form);
+          restoreSubmitControls(form);
+        } catch (error) {
+          setStatus(form, "This form is currently unavailable. Reload the page and try again.", "error");
+        }
+      });
+    });
+  }
+
+  function setupCodeOfConduct(form) {
+    if (!form.hasAttribute("data-require-code-of-conduct")) return function () { return true; };
+    var details = form.querySelector("[data-conduct-document]");
+    var reader = form.querySelector("[data-conduct-reader]");
+    var acknowledgement = form.querySelector("[data-conduct-acknowledgement]");
+    var version = form.querySelector("[data-conduct-version]");
+    var status = form.querySelector("[data-conduct-status]");
+    if (!details || !reader || !acknowledgement || !version || !status || !details.dataset.conductDocument) {
+      return function () { return setRuleError(form, null, "The Code of Conduct is unavailable. Reload the page and try again."); };
+    }
+    var documentVersion = details.dataset.conductDocument;
+    var reachedEnd = false;
+    function sync() {
+      acknowledgement.disabled = !reachedEnd;
+      if (!reachedEnd) acknowledgement.checked = false;
+      version.disabled = !reachedEnd || !acknowledgement.checked;
+      version.value = version.disabled ? "" : documentVersion;
+      status.textContent = reachedEnd ? "You can now tick the acknowledgement below." : "Read to the end to enable the acknowledgement.";
+    }
+    function checkEnd() {
+      // Closed details have no rendered height. Never count them as a short document.
+      if (!reachedEnd && details.open && reader.clientHeight > 0 && reader.scrollHeight > 0 &&
+          reader.scrollHeight - reader.clientHeight - reader.scrollTop <= 2) {
+        reachedEnd = true;
+        sync();
+      }
+    }
+    details.addEventListener("toggle", function () {
+      if (details.open) {
+        reader.focus();
+        checkEnd();
+      }
+    });
+    reader.addEventListener("scroll", checkEnd);
+    acknowledgement.addEventListener("change", sync);
+    window.addEventListener("resize", checkEnd);
+    window.addEventListener("pageshow", sync);
+    form.addEventListener("reset", function () {
+      reachedEnd = false;
+      details.open = false;
+      reader.scrollTop = 0;
+      acknowledgement.checked = false;
+      sync();
+    });
+    sync();
+    return function () {
+      sync();
+      if (!reachedEnd) {
+        details.open = true;
+        setRuleError(form, null, "Please open the Code of Conduct and read to the end.");
+        reader.focus();
+        return false;
+      }
+      if (!acknowledgement.checked) return setRuleError(form, acknowledgement, "Please tick to confirm that you have read and agree to follow the Code of Conduct.");
+      return true;
+    };
+  }
+
+  configureShell();
+  enableConditionalSections();
+  enableCheckboxChoices();
+  configureFieldConstraints();
+  setupPackageSummary();
+  setupExhibitorEstimate();
+  setupStaffUpdates();
+  enableForms();
+
+  window.NTEFormUtils = {
+    eventCodeFor: eventCodeFor,
+    resolveEventCode: resolveEventCode,
+    bookingReference: bookingReference,
+    vatTotals: vatTotals,
+    totalText: totalText,
+    calculatePartnerPricing: calculatePartnerPricing,
+    calculateExhibitorPricing: calculateExhibitorPricing,
+    includedStaffForSpace: includedStaffForSpace,
+    qualifiesForPowerDiscount: qualifiesForPowerDiscount,
+    formatWebToLeadDate: formatWebToLeadDate,
+    resolveReturnUrl: resolveReturnUrl
+  };
+}());
+
+      }(scopedWindow, scopedDocument));
+      host.setAttribute("data-nte-initialized", "true");
+      // Template and fallback are no longer needed after a successful mount.
+      host.replaceChildren();
+    }
+
+    connectListeners() {
+      if (this.listenersConnected) return;
+      this.windowListeners.forEach(function (args) {
+        nativeWindow.addEventListener.apply(nativeWindow, args);
+      });
+      this.listenersConnected = true;
+    }
+
+    disconnectedCallback() {
+      if (this.pendingContent) this.pendingContent.disconnect();
+      (this.windowListeners || []).forEach(function (args) {
+        nativeWindow.removeEventListener.apply(nativeWindow, args);
+      });
+      this.listenersConnected = false;
+    }
+  }
+  nativeWindow.customElements.define(tagName, NTEInlineForm);
+}(window, document));
+
+</script>
