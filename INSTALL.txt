@@ -11,6 +11,14 @@ Use fictional details and the agreed test mailbox during client testing.
    form, including questions which appear after a selection.
 5. Save and check the published page while logged out, on desktop and mobile.
    Also check it when reached through normal site navigation.
+6. Send Steven the page address. He checks that Squarespace kept the whole block;
+   the largest forms are longer than the interest forms already published.
+
+Replacing a form: select everything in the existing Code block, delete it and
+paste the whole new file. Never edit part of a block. The exhibitor and
+partner/sponsor interest pages already published need replacing with this
+release: it lets applicants type a website without https:// and returns them
+to the NTE website after submitting.
 
 No separate CSS or JavaScript upload is needed. The website plan must permit
 JavaScript in Code blocks. Images and fonts still need an internet connection;
