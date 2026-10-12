@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>NTE27 Partner and Sponsor Expression of Interest</title><style>html,body{margin:0;padding:0}html{background:#f4f1eb}</style></head><body>
-<nte-inline-3d5b7217e49a data-nte-page="partner-sponsor-interest" data-nte-return-url="https://stevostar1234.github.io/nte-production-forms/thank-you.html" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<nte-inline-f492249868f1 data-nte-page="partner-sponsor-interest" data-nte-return-url="https://stevostar1234.github.io/nte-production-forms/thank-you.html" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
 <template data-nte-content>
 <style>:host { all: initial; display: block; }
 .nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
@@ -225,7 +225,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
         <div class="grid">
           <div class="field full"><label class="required" for="eoi-company">Organisation name</label><input id="eoi-company" required autocomplete="organization" data-sf-field="Company"></div>
           <div class="field"><label class="required" for="eoi-organisation-type">Organisation type</label><select id="eoi-organisation-type" required data-sf-field="Organisation_Type__c"><option value="">Select</option><option>Charity - COBSEO member</option><option>Charity - Non COBSEO member</option><option>Government Department or Agency</option><option>Industry Body / Trade Association</option><option>Employer - Automotive</option><option>Employer - Clean Energy</option><option>Employer - Blue Light Services / NHS</option><option>Employer - Built Environment</option><option>Employer - Manufacturing</option><option>Employer - Defence and Security</option><option>Employer - Financial and Professional Services</option><option>Employer - Digital and Technologies</option><option>Employer - Training and Education</option><option>Employer - Land-based</option><option>Employer - Other sector</option></select></div>
-          <div class="field"><label for="eoi-website">Website</label><input id="eoi-website" type="url" autocomplete="url" placeholder="https://" data-sf-field="Website"></div>
+          <div class="field"><label for="eoi-website">Website</label><input id="eoi-website" type="text" inputmode="url" autocomplete="url" placeholder="https://" data-sf-field="Website"></div>
           <div class="field"><label class="required" for="eoi-first-name">First name</label><input id="eoi-first-name" required autocomplete="given-name" data-sf-field="FirstName"></div>
           <div class="field"><label class="required" for="eoi-last-name">Surname</label><input id="eoi-last-name" required autocomplete="family-name" data-sf-field="LastName"></div>
           <div class="field"><label class="required" for="eoi-title">Job title</label><input id="eoi-title" required autocomplete="organization-title" data-sf-field="Title"></div>
@@ -272,11 +272,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </div></div>
 </template>
 <p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
-</nte-inline-3d5b7217e49a>
+</nte-inline-f492249868f1>
 <script>
 (function (nativeWindow, nativeDocument) {
   "use strict";
-  var tagName = "nte-inline-3d5b7217e49a";
+  var tagName = "nte-inline-f492249868f1";
   if (nativeWindow.customElements.get(tagName)) return;
 
   class NTEInlineForm extends HTMLElement {
@@ -1087,11 +1087,16 @@ window.NTE_CONFIG = {
       : "Enter the full booking reference beginning NTE- from your confirmation email.");
   }
 
+  // Form posts send every line break as CRLF, so Salesforce counts two characters.
+  function postedLength(value) {
+    return String(value || "").trim().replace(/\r\n|\r|\n/g, "\r\n").length;
+  }
+
   function validateFieldLengths(form) {
     var invalid = Array.prototype.slice.call(form.querySelectorAll("input, textarea")).find(function (control) {
       if (control.disabled || /^(checkbox|radio|number|date)$/.test(control.type || "")) return false;
       var limit = control.maxLength > -1 ? control.maxLength : standardFieldLimits[control.dataset.sfField] || (config.fieldLimits || {})[control.dataset.sfField];
-      return limit && String(control.value || "").trim().length > limit;
+      return limit && postedLength(control.value) > limit;
     });
     if (!invalid) return true;
     var limit = invalid.maxLength > -1 ? invalid.maxLength : standardFieldLimits[invalid.dataset.sfField] || (config.fieldLimits || {})[invalid.dataset.sfField];
@@ -1296,6 +1301,11 @@ window.NTE_CONFIG = {
       // the browser to validate; reportValidity still enforces native rules.
       form.noValidate = true;
       var validateCodeOfConduct = setupCodeOfConduct(form);
+      // A freshly loaded page is always a new application. Browsers can restore a
+      // hidden value from session history, and Salesforce rejects a reused reference.
+      form.querySelectorAll('input[type="hidden"][data-sf-field="Booking_Reference__c"]').forEach(function (field) {
+        field.value = "";
+      });
       try {
         populateSystemFields(form);
       } catch (error) {

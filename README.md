@@ -26,6 +26,19 @@ code block. Never edit generated blocks individually. The Shadow DOM wrapper
 isolates the form from the website theme; inline CSS and JavaScript come from
 the same source as the hosted forms.
 
+Two release checks:
+
+- `npm run check:launch` lists everything that still makes a build a
+  client-testing release: the unlinked terms exception, a missing `termsUrl`,
+  and any return page, image or link outside the NTE website (for example the
+  GitHub Pages thank-you page and logo). Map those in `hosting.json`
+  (`returnUrls` per form, `pageUrls` for `assets/nte-logo-white.png` and the
+  staff-form links) and rebuild. It must pass before genuine public use.
+- `npm run verify:installed -- <page URL> ...` reads each published page and
+  confirms it carries this release's block in full. Squarespace documents no
+  Code block size limit; the largest block is about 113 KB, against the
+  93 KB interest blocks already working on the site.
+
 ## Current release boundary
 
 Production Salesforce intake is enabled for client testing. Final terms are

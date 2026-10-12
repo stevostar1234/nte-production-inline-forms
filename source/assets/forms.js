@@ -567,11 +567,16 @@
       : "Enter the full booking reference beginning NTE- from your confirmation email.");
   }
 
+  // Form posts send every line break as CRLF, so Salesforce counts two characters.
+  function postedLength(value) {
+    return String(value || "").trim().replace(/\r\n|\r|\n/g, "\r\n").length;
+  }
+
   function validateFieldLengths(form) {
     var invalid = Array.prototype.slice.call(form.querySelectorAll("input, textarea")).find(function (control) {
       if (control.disabled || /^(checkbox|radio|number|date)$/.test(control.type || "")) return false;
       var limit = control.maxLength > -1 ? control.maxLength : standardFieldLimits[control.dataset.sfField] || (config.fieldLimits || {})[control.dataset.sfField];
-      return limit && String(control.value || "").trim().length > limit;
+      return limit && postedLength(control.value) > limit;
     });
     if (!invalid) return true;
     var limit = invalid.maxLength > -1 ? invalid.maxLength : standardFieldLimits[invalid.dataset.sfField] || (config.fieldLimits || {})[invalid.dataset.sfField];
@@ -776,6 +781,11 @@
       // the browser to validate; reportValidity still enforces native rules.
       form.noValidate = true;
       var validateCodeOfConduct = setupCodeOfConduct(form);
+      // A freshly loaded page is always a new application. Browsers can restore a
+      // hidden value from session history, and Salesforce rejects a reused reference.
+      form.querySelectorAll('input[type="hidden"][data-sf-field="Booking_Reference__c"]').forEach(function (field) {
+        field.value = "";
+      });
       try {
         populateSystemFields(form);
       } catch (error) {
