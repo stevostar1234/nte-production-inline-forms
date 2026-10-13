@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>NTE27 Submission Received</title><style>html,body{margin:0;padding:0}html{background:#f4f1eb}</style></head><body>
-<nte-inline-107b4e5b17ce data-nte-page="thank-you" data-nte-return-url="https://www.nationaltransitionevent.com/" lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<nte-inline-6d959b105515 data-nte-page="thank-you" data-nte-return-url="https://www.nationaltransitionevent.com/" lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
 <template data-nte-content>
 <style>:host { all: initial; display: block; }
 .nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
@@ -226,11 +226,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </div></div>
 </template>
 <p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
-</nte-inline-107b4e5b17ce>
+</nte-inline-6d959b105515>
 <script>
 (function (nativeWindow, nativeDocument) {
   "use strict";
-  var tagName = "nte-inline-107b4e5b17ce";
+  var tagName = "nte-inline-6d959b105515";
   if (nativeWindow.customElements.get(tagName)) return;
 
   class NTEInlineForm extends HTMLElement {
@@ -361,6 +361,7 @@ window.NTE_CONFIG = {
     "Haulier_Vehicle_Registration__c": 80
   },
   "customFieldIds": {
+    "NTE_Armed_Forces_Count__c": "00NRz000009xPq2",
     "Accompanying_Guest_Email__c": "00NRz000009vjEi",
     "Accompanying_Guest_Name__c": "00NRz000009vjEj",
     "Additional_Staff_Count__c": "00NRz000009vjEk",
@@ -1110,6 +1111,26 @@ window.NTE_CONFIG = {
     return price;
   }
 
+  function validateArmedForcesCount(form) {
+    var field = form.querySelector('[data-sf-field="NTE_Armed_Forces_Count__c"]');
+    if (!field || field.disabled) return true;
+    if (field.validity && field.validity.badInput) return setRuleError(form, field, "Enter a whole number of people, or leave blank if not known yet.");
+    var raw = String(field.value || "").trim();
+    if (!raw) return true;
+    var count = Number(raw);
+    if (!Number.isFinite(count) || count < 0 || count > 99999 || Math.floor(count) !== count) {
+      return setRuleError(form, field, "Enter a whole number from 0 to 99,999, or leave blank if not known yet.");
+    }
+    if (form.dataset.formKind === "guest") {
+      var accompanying = form.querySelector('[data-sf-field="Guest_Accompanying__c"]');
+      var maximum = accompanying && accompanying.value === "Yes" ? 2 : 1;
+      if (count > maximum) return setRuleError(form, field, maximum === 1
+        ? "Enter 0 or 1. If someone is accompanying you, add their details above."
+        : "Enter 0, 1 or 2 for the people in this registration.");
+    }
+    return true;
+  }
+
   function validateStaffUpdate(form) {
     if (form.dataset.formKind === "partner-staff-update") {
       var partnerTotalControl = document.getElementById("partner-staff-total");
@@ -1295,7 +1316,7 @@ window.NTE_CONFIG = {
         if (hasBlankRequiredText(form)) return;
         if (!validateCheckboxChoices(form)) return;
         if (!validateCodeOfConduct()) return;
-        if (!validateFieldLengths(form) || !validateEmailAddresses(form) || !validateBookingReferences(form) || !validateCatalogPricing(form) || !validateStaffUpdate(form) || !validateHeavyItems(form)) return;
+        if (!validateFieldLengths(form) || !validateEmailAddresses(form) || !validateBookingReferences(form) || !validateCatalogPricing(form) || !validateStaffUpdate(form) || !validateArmedForcesCount(form) || !validateHeavyItems(form)) return;
         if (!form.checkValidity()) {
           setStatus(form, "Please complete the highlighted required fields.", "error");
           form.reportValidity();

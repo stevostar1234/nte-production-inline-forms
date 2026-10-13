@@ -19,7 +19,7 @@
   <main class="page-shell">
     <form class="main-column" data-web-to-lead data-form-kind="guest" data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your NTE27 guest registration. The event team will send further information closer to the event.">
       <input type="hidden" value="Guest Registration" data-sf-field="Web_Form_Type__c">
-      <input type="hidden" value="guest-registration-v4" data-sf-field="Form_Version__c">
+      <input type="hidden" value="guest-registration-v5" data-sf-field="Form_Version__c">
       <input type="hidden" data-sf-field="NTE_Event_Code__c">
       <input type="hidden" data-combine-fields="guest-companion-first-name,guest-companion-last-name" data-sf-field="Accompanying_Guest_Name__c">
 
@@ -47,6 +47,7 @@
             <div class="field full"><label class="required" for="guest-companion-email">Email address</label><input id="guest-companion-email" type="email" data-required-when-visible autocomplete="email" data-sf-field="Accompanying_Guest_Email__c"></div>
           </div>
         </div>
+        <div class="field full"><label for="armed-forces-count">How many people in your party are members of the Armed Forces community?</label><input id="armed-forces-count" type="number" min="0" max="2" step="1" inputmode="numeric" aria-describedby="armed-forces-help" data-sf-field="NTE_Armed_Forces_Count__c"><span class="help" id="armed-forces-help">Serving, Veteran, Spouse/Partner, Family Member, Reservist, Cadet Force Adult Volunteer or Cadet. Count each person once. Include yourself and your accompanying guest, if applicable. Enter 0 for none, or leave blank if not known yet.</span></div>
       </section>
 
       <section class="card">
@@ -69,6 +70,6 @@
     </form>
   </main>
   <footer class="site-footer">Questions? <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a></footer>
-  <script src="assets/config.js?v=20261013-web-addresses-1"></script><script src="assets/forms.js?v=20261013-sockets-1"></script>
+  <script src="assets/config.js?v=20261013-community-1"></script><script src="assets/forms.js?v=20261013-community-1"></script>
 </body>
 </html>

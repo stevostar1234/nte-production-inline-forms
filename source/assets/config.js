@@ -80,6 +80,7 @@ window.NTE_CONFIG = {
     "Haulier_Vehicle_Registration__c": 80
   },
   "customFieldIds": {
+    "NTE_Armed_Forces_Count__c": "00NRz000009xPq2",
     "Accompanying_Guest_Email__c": "00NRz000009vjEi",
     "Accompanying_Guest_Name__c": "00NRz000009vjEj",
     "Additional_Staff_Count__c": "00NRz000009vjEk",

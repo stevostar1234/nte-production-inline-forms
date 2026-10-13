@@ -22,6 +22,10 @@ The previous GitHub thank-you address also redirects there, including for older
 installed blocks. Replace the two existing expression-of-interest blocks with
 this release to allow ordinary website addresses such as www.example.com.
 
+Update the exhibitor staff details, partner/sponsor staff details and guest
+registration blocks to include the optional Armed Forces community headcount.
+Delivery partners use the partner/sponsor staff details form.
+
 Supporting pages contains the staff-form chooser and an optional thank-you
 panel. Application/update links still use the production forms site until the
 final client-hosted page URLs are supplied. Send Steven those URLs when ready.

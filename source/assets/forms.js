@@ -636,6 +636,26 @@
     return price;
   }
 
+  function validateArmedForcesCount(form) {
+    var field = form.querySelector('[data-sf-field="NTE_Armed_Forces_Count__c"]');
+    if (!field || field.disabled) return true;
+    if (field.validity && field.validity.badInput) return setRuleError(form, field, "Enter a whole number of people, or leave blank if not known yet.");
+    var raw = String(field.value || "").trim();
+    if (!raw) return true;
+    var count = Number(raw);
+    if (!Number.isFinite(count) || count < 0 || count > 99999 || Math.floor(count) !== count) {
+      return setRuleError(form, field, "Enter a whole number from 0 to 99,999, or leave blank if not known yet.");
+    }
+    if (form.dataset.formKind === "guest") {
+      var accompanying = form.querySelector('[data-sf-field="Guest_Accompanying__c"]');
+      var maximum = accompanying && accompanying.value === "Yes" ? 2 : 1;
+      if (count > maximum) return setRuleError(form, field, maximum === 1
+        ? "Enter 0 or 1. If someone is accompanying you, add their details above."
+        : "Enter 0, 1 or 2 for the people in this registration.");
+    }
+    return true;
+  }
+
   function validateStaffUpdate(form) {
     if (form.dataset.formKind === "partner-staff-update") {
       var partnerTotalControl = document.getElementById("partner-staff-total");
@@ -821,7 +841,7 @@
         if (hasBlankRequiredText(form)) return;
         if (!validateCheckboxChoices(form)) return;
         if (!validateCodeOfConduct()) return;
-        if (!validateFieldLengths(form) || !validateEmailAddresses(form) || !validateBookingReferences(form) || !validateCatalogPricing(form) || !validateStaffUpdate(form) || !validateHeavyItems(form)) return;
+        if (!validateFieldLengths(form) || !validateEmailAddresses(form) || !validateBookingReferences(form) || !validateCatalogPricing(form) || !validateStaffUpdate(form) || !validateArmedForcesCount(form) || !validateHeavyItems(form)) return;
         if (!form.checkValidity()) {
           setStatus(form, "Please complete the highlighted required fields.", "error");
           form.reportValidity();
