@@ -35,8 +35,10 @@ production privacy and terms fields. The owner selected partner/sponsor terms
 for Delivery Partners. Historical test ticks are not final-terms acceptance.
 
 PDFs are linked externally, not embedded in code blocks. Replace previously
-installed application blocks with this release. The brochure and final
-client-hosted form/PDF URLs remain outstanding. Regenerate blocks when those
+installed application blocks with this release. The brochure link is installed but currently opens the owner-requested blank
+PDF through a stable redirect page. Replace its target with the final brochure
+without changing installed forms. The finished brochure and final client-hosted
+form/PDF URLs remain outstanding. Regenerate blocks when those
 URLs change. Do not create real records or payments to test this repository.
 
 This repository contains public form code and public Web-to-Lead field IDs;

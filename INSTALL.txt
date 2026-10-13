@@ -42,7 +42,10 @@ The PDFs are hosted alongside the production forms and do not count towards
 Squarespace's code block size limit. All supplied blocks are below 400 KB and
 300,000 characters. Send Steven the NTE-hosted PDF URLs if these are moved.
 
-The partner/sponsor brochure and final client-hosted form URLs are still needed.
+The package brochure link is ready and opens a temporary blank PDF. Steven can
+replace it with the finished brochure, or point it to your hosted brochure,
+without changing the form code. The finished brochure and final client-hosted
+form URLs are still needed.
 Internal NTE notifications go to nte@missioncommunity.org. The temporary finance
 copy goes to Steven; the final accounts address will be configured separately.
 
