@@ -77,6 +77,11 @@
     status.focus();
   }
 
+  function termsUrlFor(form) {
+    var type = form && form.dataset.termsType;
+    return String(type ? (config.termsUrls || {})[type] || "" : config.termsUrl || "").trim();
+  }
+
   function configureShell() {
     if (config.siteNotice && document.body && document.createElement && !document.querySelector("[data-site-notice]")) {
       var notice = document.createElement("aside");
@@ -91,8 +96,9 @@
     });
     ["privacy", "terms"].forEach(function (kind) {
       document.querySelectorAll('[data-config-link="' + kind + '"]').forEach(function (link) {
-        if (config[kind + "Url"]) {
-          link.href = config[kind + "Url"];
+        var url = kind === "terms" ? termsUrlFor(link.closest("form")) : config[kind + "Url"];
+        if (url) {
+          link.href = url;
           if (config[kind + "LinkLabel"]) link.textContent = config[kind + "LinkLabel"];
         } else {
           link.removeAttribute("href");
@@ -102,7 +108,7 @@
       });
     });
     document.querySelectorAll('[data-booking-terms]').forEach(function (section) {
-      var available = !!config.termsUrl || config.allowUnlinkedTermsForTesting === true;
+      var available = !!termsUrlFor(section.closest("form")) || config.allowUnlinkedTermsForTesting === true;
       section.hidden = !available;
       section.querySelectorAll("input").forEach(function (input) { input.disabled = !available; });
     });
@@ -713,7 +719,7 @@
     if (!config.orgId) missing.push("Salesforce organisation ID");
     if (!resolveReturnUrl(form)) missing.push("post-submission return URL");
     if (form.querySelector('[data-config-link="privacy"]') && !config.privacyUrl) missing.push("Privacy Policy URL");
-    if (config.mode === "production" && form.querySelector('[data-booking-terms]') && !config.termsUrl && config.allowUnlinkedTermsForTesting !== true) missing.push("Terms and Conditions URL");
+    if (config.mode === "production" && form.querySelector('[data-booking-terms]') && !termsUrlFor(form) && config.allowUnlinkedTermsForTesting !== true) missing.push("Terms and Conditions URL");
     return missing;
   }
 

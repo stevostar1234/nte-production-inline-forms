@@ -1,4 +1,4 @@
-<nte-inline-6d959b105515 data-nte-page="partner-sponsor-application" data-nte-return-url="https://www.nationaltransitionevent.com/" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<nte-inline-9fc2dcdd6628 data-nte-page="partner-sponsor-application" data-nte-return-url="https://www.nationaltransitionevent.com/" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
 <template data-nte-content>
 <style>:host { all: initial; display: block; }
 .nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
@@ -214,10 +214,10 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   </header>
 
   <main class="page-shell">
-    <form class="main-column" data-web-to-lead data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your NTE27 partnership / sponsorship application. The NTE team will review it and contact you with the outcome.">
+    <form class="main-column" data-web-to-lead data-terms-type="partnerSponsor" data-lead-source="Customer Event" data-use-default-rule="0" data-confirmation-preview="Thank you. We have received your NTE27 partnership / sponsorship application. The NTE team will review it and contact you with the outcome.">
       <input type="hidden" data-sf-field="Logo_Upload_URL__c">
       <input type="hidden" value="Partner / Sponsor Application" data-sf-field="Web_Form_Type__c">
-      <input type="hidden" value="partner-sponsor-application-v14" data-sf-field="Form_Version__c">
+      <input type="hidden" value="partner-sponsor-application-v15" data-sf-field="Form_Version__c">
       <input type="hidden" data-sf-field="NTE_Event_Code__c">
       <input type="hidden" data-sf-field="Booking_Reference__c">
       <input type="hidden" data-combine-fields="partner-first-name,partner-last-name" data-sf-field="Sponsored_Name__c">
@@ -344,11 +344,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </div></div>
 </template>
 <p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
-</nte-inline-6d959b105515>
+</nte-inline-9fc2dcdd6628>
 <script>
 (function (nativeWindow, nativeDocument) {
   "use strict";
-  var tagName = "nte-inline-6d959b105515";
+  var tagName = "nte-inline-9fc2dcdd6628";
   if (nativeWindow.customElements.get(tagName)) return;
 
   class NTEInlineForm extends HTMLElement {
@@ -409,8 +409,12 @@ window.NTE_CONFIG = {
   "privacyUrl": "https://www.nationaltransitionevent.com/privacy",
   "privacyLinkLabel": "NTE27 Privacy Policy",
   "termsUrl": "",
+  "termsUrls": {
+    "exhibitor": "https://stevostar1234.github.io/nte-production-forms/assets/documents/nte27-exhibitor-terms-2026-10-12.pdf",
+    "partnerSponsor": "https://stevostar1234.github.io/nte-production-forms/assets/documents/nte27-partner-sponsor-terms-2026-10-12.pdf"
+  },
   "termsLinkLabel": "NTE27 Terms and Conditions",
-  "allowUnlinkedTermsForTesting": true,
+  "allowUnlinkedTermsForTesting": false,
   "siteNotice": "",
   "logoFileRequestUrl": "https://missioncommunityorg.sharepoint.com/:f:/s/MissionCommunity/IgACqM_zXPyfQ6rpuy0q2kTJAZYM8Ny7YDP8_9OO_DGD4tg",
   "supportEmail": "nte@missioncommunity.org",
@@ -670,6 +674,11 @@ window.NTE_CONFIG = {
     status.focus();
   }
 
+  function termsUrlFor(form) {
+    var type = form && form.dataset.termsType;
+    return String(type ? (config.termsUrls || {})[type] || "" : config.termsUrl || "").trim();
+  }
+
   function configureShell() {
     if (config.siteNotice && document.body && document.createElement && !document.querySelector("[data-site-notice]")) {
       var notice = document.createElement("aside");
@@ -684,8 +693,9 @@ window.NTE_CONFIG = {
     });
     ["privacy", "terms"].forEach(function (kind) {
       document.querySelectorAll('[data-config-link="' + kind + '"]').forEach(function (link) {
-        if (config[kind + "Url"]) {
-          link.href = config[kind + "Url"];
+        var url = kind === "terms" ? termsUrlFor(link.closest("form")) : config[kind + "Url"];
+        if (url) {
+          link.href = url;
           if (config[kind + "LinkLabel"]) link.textContent = config[kind + "LinkLabel"];
         } else {
           link.removeAttribute("href");
@@ -695,7 +705,7 @@ window.NTE_CONFIG = {
       });
     });
     document.querySelectorAll('[data-booking-terms]').forEach(function (section) {
-      var available = !!config.termsUrl || config.allowUnlinkedTermsForTesting === true;
+      var available = !!termsUrlFor(section.closest("form")) || config.allowUnlinkedTermsForTesting === true;
       section.hidden = !available;
       section.querySelectorAll("input").forEach(function (input) { input.disabled = !available; });
     });
@@ -1306,7 +1316,7 @@ window.NTE_CONFIG = {
     if (!config.orgId) missing.push("Salesforce organisation ID");
     if (!resolveReturnUrl(form)) missing.push("post-submission return URL");
     if (form.querySelector('[data-config-link="privacy"]') && !config.privacyUrl) missing.push("Privacy Policy URL");
-    if (config.mode === "production" && form.querySelector('[data-booking-terms]') && !config.termsUrl && config.allowUnlinkedTermsForTesting !== true) missing.push("Terms and Conditions URL");
+    if (config.mode === "production" && form.querySelector('[data-booking-terms]') && !termsUrlFor(form) && config.allowUnlinkedTermsForTesting !== true) missing.push("Terms and Conditions URL");
     return missing;
   }
 

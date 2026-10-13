@@ -8,7 +8,7 @@ same production Salesforce org. Volunteers are excluded.
 - `previews/`: the exact code blocks in minimal HTML pages.
 - `source/`: the production source snapshot.
 - `source-manifest.json` and `build-manifest.json`: source and output hashes.
-- `INSTALL.txt`: website handover and the temporary terms-testing limitation.
+- `INSTALL.txt`: website handover and current terms links.
 - `nte-squarespace-code-blocks.zip`: all blocks and installation instructions.
 
 ## Build and check
@@ -28,12 +28,16 @@ the same source as the hosted forms.
 
 ## Current release boundary
 
-Production Salesforce intake is enabled for client testing. Final terms are
-awaited: `allowUnlinkedTermsForTesting: true` is explicitly owner-approved for
-these fictional tests, with separate required consent checkboxes. Set the final
-`termsUrl` and remove this exception before public launch. Test checkbox values
-must not be represented as acceptance of the final terms. Live Stripe, final
-notification inboxes and the client's website URLs are separate launch steps.
+Production Salesforce intake and live Stripe are enabled. Kate's final terms
+are linked by audience through `termsUrls`; the temporary unlinked-terms
+exception is disabled. Separate required checkboxes populate the existing
+production privacy and terms fields. The owner selected partner/sponsor terms
+for Delivery Partners. Historical test ticks are not final-terms acceptance.
+
+PDFs are linked externally, not embedded in code blocks. Replace previously
+installed application blocks with this release. The brochure and final
+client-hosted form/PDF URLs remain outstanding. Regenerate blocks when those
+URLs change. Do not create real records or payments to test this repository.
 
 This repository contains public form code and public Web-to-Lead field IDs;
 it must never contain client records, Stripe keys or Salesforce credentials.

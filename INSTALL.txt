@@ -1,8 +1,8 @@
 NTE forms for the client website
 
 These files send to production Salesforce. They match the production client
-testing forms at https://stevostar1234.github.io/nte-production-forms/ .
-Use fictional details and the agreed test mailbox during client testing.
+forms at https://stevostar1234.github.io/nte-production-forms/ .
+Stripe is live. Do not make test payments or submit fictional applications here.
 
 1. Open the required .txt file in a plain-text editor and copy its entire contents.
 2. In Squarespace, add a Code block, choose HTML and paste the code.
@@ -30,16 +30,21 @@ Supporting pages contains the staff-form chooser and an optional thank-you
 panel. Application/update links still use the production forms site until the
 final client-hosted page URLs are supplied. Send Steven those URLs when ready.
 
-TERMS BEFORE PUBLIC LAUNCH
-The owner approved a visible, unlinked Terms & Conditions checkbox for testing.
-It writes to its own Salesforce checkbox, separate from Privacy Policy consent.
-Final terms must be linked and the temporary testing exception removed before
-public launch. These test ticks are not acceptance of the final terms.
-Steven will regenerate the files; replace each code block in full with that
-release. Do not publish this testing release for genuine applications.
+TERMS AND PRIVACY
+The application forms link to Kate's final NTE27 terms as separate PDF files.
+Exhibitors use the exhibitor terms. Partner/sponsor and Delivery Partner
+applications use the partner/sponsor terms. Privacy and terms each have their
+own required checkbox and their own Salesforce field.
 
-Stripe is currently in the client's Stripe sandbox. Live payment activation
-and final internal notification inboxes are separate launch steps.
+Replace any previously installed application block in full with this release.
+The earlier unlinked testing checkboxes did not provide the final terms.
+The PDFs are hosted alongside the production forms and do not count towards
+Squarespace's code block size limit. All supplied blocks are below 400 KB and
+300,000 characters. Send Steven the NTE-hosted PDF URLs if these are moved.
+
+The partner/sponsor brochure and final client-hosted form URLs are still needed.
+Internal NTE notifications go to nte@missioncommunity.org. The temporary finance
+copy goes to Steven; the final accounts address will be configured separately.
 
 Code block guidance:
 https://support.squarespace.com/hc/en-us/articles/206543167-Code-blocks

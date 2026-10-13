@@ -10,8 +10,12 @@ window.NTE_CONFIG = {
   "privacyUrl": "https://www.nationaltransitionevent.com/privacy",
   "privacyLinkLabel": "NTE27 Privacy Policy",
   "termsUrl": "",
+  "termsUrls": {
+    "exhibitor": "https://stevostar1234.github.io/nte-production-forms/assets/documents/nte27-exhibitor-terms-2026-10-12.pdf",
+    "partnerSponsor": "https://stevostar1234.github.io/nte-production-forms/assets/documents/nte27-partner-sponsor-terms-2026-10-12.pdf"
+  },
   "termsLinkLabel": "NTE27 Terms and Conditions",
-  "allowUnlinkedTermsForTesting": true,
+  "allowUnlinkedTermsForTesting": false,
   "siteNotice": "",
   "logoFileRequestUrl": "https://missioncommunityorg.sharepoint.com/:f:/s/MissionCommunity/IgACqM_zXPyfQ6rpuy0q2kTJAZYM8Ny7YDP8_9OO_DGD4tg",
   "supportEmail": "nte@missioncommunity.org",
