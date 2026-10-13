@@ -38,7 +38,7 @@
       <input type="hidden" value="0" data-sf-field="Additional_Staff_Count__c">
       <input type="hidden" value="0" data-sf-field="Listed_Price_Total__c">
       <input type="hidden" value="Calculated" data-sf-field="Pricing_Status__c">
-      <input type="hidden" value="NTE27-2026-10-07-VAT" data-sf-field="Pricing_Version__c">
+      <input type="hidden" value="NTE27-2026-10-13-SOCKETS-VAT" data-sf-field="Pricing_Version__c">
       <input id="invoice-required" type="hidden" value="No" data-sf-field="Invoice_Required__c">
       <input type="hidden" value="Stripe" data-sf-field="Payment_Method__c">
       <input type="hidden" value="No" data-sf-field="Invoice_Requested__c">
@@ -135,7 +135,7 @@
       <section class="card" id="add-ons">
         <h2><span class="section-number">5</span>Power and booking total</h2>
         <div class="grid">
-          <div class="field"><span class="label required" id="power-question-label">Do you need power on your stand for an additional £100 + VAT per socket?</span><div class="choice-grid" role="radiogroup" aria-labelledby="power-question-label" aria-describedby="power-question-help" aria-required="true"><label class="choice"><input type="radio" name="power-required" id="power-required-yes" value="Yes" required data-sf-field="Stand_Power__c"> Yes</label><label class="choice"><input type="radio" name="power-required" value="No" data-sf-field="Stand_Power__c"> No</label></div><span class="help" id="power-question-help">Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.</span></div>
+          <div class="field"><span class="label required" id="power-question-label">Do you need power on your stand for an additional £100 + VAT per socket?</span><div class="choice-grid" role="radiogroup" aria-labelledby="power-question-label" aria-describedby="power-question-help" aria-required="true"><label class="choice"><input type="radio" name="power-required" id="power-required-yes" value="Yes" required data-sf-field="Stand_Power__c"> Yes</label><label class="choice"><input type="radio" name="power-required" value="No" data-sf-field="Stand_Power__c"> No</label></div><span class="help" id="power-question-help">Unless indicated here, power may not be possible. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount.</span></div>
           <div class="field conditional" data-conditional-for="power-required-yes" data-conditional-value="Yes"><label class="required" for="power-count">Number of sockets</label><input id="power-count" type="number" min="1" max="20" data-required-when-visible data-sf-field="Power_Socket_Count__c"></div>
         </div>
         <div class="callout" aria-live="polite"><p data-complimentary-benefits hidden><strong>Included free</strong><br>Single exhibition space, one 6ft trestle table, one chair and two staff places - worth £499 + VAT.</p><strong data-estimate>Select a space to see your total including VAT.</strong><p class="help" data-discount-savings hidden></p></div>
@@ -183,6 +183,6 @@
   </main>
 
   <footer class="site-footer">Questions? <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a></footer>
-  <script src="assets/config.js?v=20261013-web-addresses-1"></script><script src="assets/forms.js?v=20261011-client-terms-1"></script>
+  <script src="assets/config.js?v=20261013-web-addresses-1"></script><script src="assets/forms.js?v=20261013-sockets-1"></script>
 </body>
 </html>

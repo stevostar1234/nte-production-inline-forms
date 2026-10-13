@@ -3,7 +3,7 @@
 
   var config = window.NTE_CONFIG || window.NTE27_CONFIG || {};
   var vatRate = 20;
-  var pricingVersion = "NTE27-2026-10-07-VAT";
+  var pricingVersion = "NTE27-2026-10-13-SOCKETS-VAT";
   var syncConditionalSections = function () {};
   var derivedFieldSynchronizers = [];
   var sponsorPackagePrices = {
@@ -335,7 +335,7 @@
   }
 
   function qualifiesForPowerDiscount(category) {
-    return ["Charity - member of Cobseo", "Charity - not a member of Cobseo", "Government or Government Agency", "Local Government or LG related", "Employer - Blue Light & NHS"].indexOf(String(category || "")) !== -1;
+    return ["Charity - member of Cobseo", "Charity - not a member of Cobseo", "Government or Government Agency", "Local Government or LG related", "Employer - Blue Light & NHS", "CIC or Not for Profit", "Regular or Reserve Services, or Cadets"].indexOf(String(category || "")) !== -1;
   }
 
   function includedStaffForSpace(spaceName) {
@@ -436,7 +436,7 @@
       var powerLabel = document.getElementById("power-question-label");
       var powerHelp = document.getElementById("power-question-help");
       if (powerLabel) powerLabel.textContent = powerIncluded ? "Do you need any additional power sockets for £100 + VAT per socket?" : "Do you need power on your stand for an additional £100 + VAT per socket?";
-      if (powerHelp) powerHelp.textContent = powerIncluded ? "Your selected space includes standard power. Select Yes only if you need additional sockets. Charities, government and blue light organisations qualify for a 50% discount on additional sockets." : "Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.";
+      if (powerHelp) powerHelp.textContent = powerIncluded ? "Your selected space includes standard power. Select Yes only if you need additional sockets. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount on additional sockets." : "Unless indicated here, power may not be possible. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount.";
       var socketCount = Number((document.getElementById("power-count") || {}).value || 0);
       var plannedStaffCount = Number((document.getElementById("planned-count") || {}).value || 0);
       var includedStaffCount = space ? includedStaffForSpace(space.value) : null;

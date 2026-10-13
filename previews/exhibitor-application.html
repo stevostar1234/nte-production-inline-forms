@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>NTE27 Exhibitor Application</title><style>html,body{margin:0;padding:0}html{background:#f4f1eb}</style></head><body>
-<nte-inline-8caed8a429f1 data-nte-page="exhibitor-application" data-nte-return-url="https://www.nationaltransitionevent.com/" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<nte-inline-107b4e5b17ce data-nte-page="exhibitor-application" data-nte-return-url="https://www.nationaltransitionevent.com/" data-nte-inter lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
 <template data-nte-content>
 <style>:host { all: initial; display: block; }
 .nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
@@ -237,7 +237,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
       <input type="hidden" value="0" data-sf-field="Additional_Staff_Count__c">
       <input type="hidden" value="0" data-sf-field="Listed_Price_Total__c">
       <input type="hidden" value="Calculated" data-sf-field="Pricing_Status__c">
-      <input type="hidden" value="NTE27-2026-10-07-VAT" data-sf-field="Pricing_Version__c">
+      <input type="hidden" value="NTE27-2026-10-13-SOCKETS-VAT" data-sf-field="Pricing_Version__c">
       <input id="invoice-required" type="hidden" value="No" data-sf-field="Invoice_Required__c">
       <input type="hidden" value="Stripe" data-sf-field="Payment_Method__c">
       <input type="hidden" value="No" data-sf-field="Invoice_Requested__c">
@@ -334,7 +334,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
       <section class="card" id="add-ons">
         <h2><span class="section-number">5</span>Power and booking total</h2>
         <div class="grid">
-          <div class="field"><span class="label required" id="power-question-label">Do you need power on your stand for an additional £100 + VAT per socket?</span><div class="choice-grid" role="radiogroup" aria-labelledby="power-question-label" aria-describedby="power-question-help" aria-required="true"><label class="choice"><input type="radio" name="power-required" id="power-required-yes" value="Yes" required data-sf-field="Stand_Power__c"> Yes</label><label class="choice"><input type="radio" name="power-required" value="No" data-sf-field="Stand_Power__c"> No</label></div><span class="help" id="power-question-help">Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.</span></div>
+          <div class="field"><span class="label required" id="power-question-label">Do you need power on your stand for an additional £100 + VAT per socket?</span><div class="choice-grid" role="radiogroup" aria-labelledby="power-question-label" aria-describedby="power-question-help" aria-required="true"><label class="choice"><input type="radio" name="power-required" id="power-required-yes" value="Yes" required data-sf-field="Stand_Power__c"> Yes</label><label class="choice"><input type="radio" name="power-required" value="No" data-sf-field="Stand_Power__c"> No</label></div><span class="help" id="power-question-help">Unless indicated here, power may not be possible. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount.</span></div>
           <div class="field conditional" data-conditional-for="power-required-yes" data-conditional-value="Yes"><label class="required" for="power-count">Number of sockets</label><input id="power-count" type="number" min="1" max="20" data-required-when-visible data-sf-field="Power_Socket_Count__c"></div>
         </div>
         <div class="callout" aria-live="polite"><p data-complimentary-benefits hidden><strong>Included free</strong><br>Single exhibition space, one 6ft trestle table, one chair and two staff places - worth £499 + VAT.</p><strong data-estimate>Select a space to see your total including VAT.</strong><p class="help" data-discount-savings hidden></p></div>
@@ -386,11 +386,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </div></div>
 </template>
 <p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
-</nte-inline-8caed8a429f1>
+</nte-inline-107b4e5b17ce>
 <script>
 (function (nativeWindow, nativeDocument) {
   "use strict";
-  var tagName = "nte-inline-8caed8a429f1";
+  var tagName = "nte-inline-107b4e5b17ce";
   if (nativeWindow.customElements.get(tagName)) return;
 
   class NTEInlineForm extends HTMLElement {
@@ -637,7 +637,7 @@ window.NTE_CONFIG = {
 
   var config = window.NTE_CONFIG || window.NTE27_CONFIG || {};
   var vatRate = 20;
-  var pricingVersion = "NTE27-2026-10-07-VAT";
+  var pricingVersion = "NTE27-2026-10-13-SOCKETS-VAT";
   var syncConditionalSections = function () {};
   var derivedFieldSynchronizers = [];
   var sponsorPackagePrices = {
@@ -969,7 +969,7 @@ window.NTE_CONFIG = {
   }
 
   function qualifiesForPowerDiscount(category) {
-    return ["Charity - member of Cobseo", "Charity - not a member of Cobseo", "Government or Government Agency", "Local Government or LG related", "Employer - Blue Light & NHS"].indexOf(String(category || "")) !== -1;
+    return ["Charity - member of Cobseo", "Charity - not a member of Cobseo", "Government or Government Agency", "Local Government or LG related", "Employer - Blue Light & NHS", "CIC or Not for Profit", "Regular or Reserve Services, or Cadets"].indexOf(String(category || "")) !== -1;
   }
 
   function includedStaffForSpace(spaceName) {
@@ -1070,7 +1070,7 @@ window.NTE_CONFIG = {
       var powerLabel = document.getElementById("power-question-label");
       var powerHelp = document.getElementById("power-question-help");
       if (powerLabel) powerLabel.textContent = powerIncluded ? "Do you need any additional power sockets for £100 + VAT per socket?" : "Do you need power on your stand for an additional £100 + VAT per socket?";
-      if (powerHelp) powerHelp.textContent = powerIncluded ? "Your selected space includes standard power. Select Yes only if you need additional sockets. Charities, government and blue light organisations qualify for a 50% discount on additional sockets." : "Unless indicated here, power may not be possible. Charities, government and blue light organisations qualify for a 50% discount.";
+      if (powerHelp) powerHelp.textContent = powerIncluded ? "Your selected space includes standard power. Select Yes only if you need additional sockets. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount on additional sockets." : "Unless indicated here, power may not be possible. Charities, CICs, not-for-profits, government, Blue Light/NHS, Regular/Reserve Services and Cadets qualify for a 50% discount.";
       var socketCount = Number((document.getElementById("power-count") || {}).value || 0);
       var plannedStaffCount = Number((document.getElementById("planned-count") || {}).value || 0);
       var includedStaffCount = space ? includedStaffForSpace(space.value) : null;
