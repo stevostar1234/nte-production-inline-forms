@@ -1,4 +1,4 @@
-<nte-inline-3d5b7217e49a data-nte-page="thank-you" data-nte-return-url="https://stevostar1234.github.io/nte-production-forms/thank-you.html" lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
+<nte-inline-8caed8a429f1 data-nte-page="thank-you" data-nte-return-url="https://www.nationaltransitionevent.com/" lang="en-GB" style="display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;">
 <template data-nte-content>
 <style>:host { all: initial; display: block; }
 .nte-inline-root { all: initial; display: block; font-size: 16px; direction: ltr; text-align: left; }
@@ -209,14 +209,14 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </style>
 <div class="nte-inline-root"><div class="nte-inline-page">
   <header class="site-header">
-    <nav class="nav" aria-label="Primary navigation"><a class="brand" href="https://stevostar1234.github.io/nte-production-forms/index.html"><img class="brand-logo" src="https://stevostar1234.github.io/nte-production-forms/assets/nte-logo-white.png" alt="The National Transition Event"></a></nav>
+    <nav class="nav" aria-label="Primary navigation"><a class="brand" href="https://www.nationaltransitionevent.com/"><img class="brand-logo" src="https://stevostar1234.github.io/nte-production-forms/assets/nte-logo-white.png" alt="The National Transition Event"></a></nav>
     <div class="hero"><p class="eyebrow">National Transition Event</p><h1>Submission received</h1></div>
   </header>
   <main class="page-shell">
     <section class="card">
       <h2>Thank you</h2>
       <p>The NTE team will be in touch if anything else is needed.</p>
-      <div class="button-row"><a class="button" href="https://stevostar1234.github.io/nte-production-forms/index.html">Return to the form hub</a></div>
+      <div class="button-row"><a class="button" href="https://www.nationaltransitionevent.com/">Return to the NTE website</a></div>
     </section>
   </main>
   <footer class="site-footer">National Transition Event · Mission Community</footer>
@@ -224,11 +224,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 </div></div>
 </template>
 <p data-nte-ready role="status">This form could not load. Please refresh the page or contact <a href="mailto:nte@missioncommunity.org">nte@missioncommunity.org</a>.</p>
-</nte-inline-3d5b7217e49a>
+</nte-inline-8caed8a429f1>
 <script>
 (function (nativeWindow, nativeDocument) {
   "use strict";
-  var tagName = "nte-inline-3d5b7217e49a";
+  var tagName = "nte-inline-8caed8a429f1";
   if (nativeWindow.customElements.get(tagName)) return;
 
   class NTEInlineForm extends HTMLElement {
@@ -285,7 +285,7 @@ window.NTE_CONFIG = {
   "dateOfBirthMinDate": "1900-01-01",
   "endpoint": "https://missionmotorsportnpc.my.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
   "orgId": "00Dd3000004vNGv",
-  "returnUrl": "https://stevostar1234.github.io/nte-production-forms/thank-you.html",
+  "returnUrl": "https://www.nationaltransitionevent.com/",
   "privacyUrl": "https://www.nationaltransitionevent.com/privacy",
   "privacyLinkLabel": "NTE27 Privacy Policy",
   "termsUrl": "",

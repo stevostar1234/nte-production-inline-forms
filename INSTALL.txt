@@ -17,11 +17,14 @@ JavaScript in Code blocks. Images and fonts still need an internet connection;
 logos use the production forms site and font files use Google's font hosting.
 The secure logo upload uses the existing SharePoint link.
 
-Supporting pages contains the staff-form chooser and thank-you page. They are
-optional embeds; until final website addresses are supplied, links and the
-post-submission return page use the production GitHub Pages site. Send Steven
-the final published URLs so he can update both Salesforce email links and the
-form files together. Keep booking updates and the thank-you page out of search.
+After submission, every form returns to https://www.nationaltransitionevent.com/.
+The previous GitHub thank-you address also redirects there, including for older
+installed blocks. Replace the two existing expression-of-interest blocks with
+this release to allow ordinary website addresses such as www.example.com.
+
+Supporting pages contains the staff-form chooser and an optional thank-you
+panel. Application/update links still use the production forms site until the
+final client-hosted page URLs are supplied. Send Steven those URLs when ready.
 
 TERMS BEFORE PUBLIC LAUNCH
 The owner approved a visible, unlinked Terms & Conditions checkbox for testing.

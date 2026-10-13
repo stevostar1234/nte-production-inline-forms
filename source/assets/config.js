@@ -6,7 +6,7 @@ window.NTE_CONFIG = {
   "dateOfBirthMinDate": "1900-01-01",
   "endpoint": "https://missionmotorsportnpc.my.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
   "orgId": "00Dd3000004vNGv",
-  "returnUrl": "https://stevostar1234.github.io/nte-production-forms/thank-you.html",
+  "returnUrl": "https://www.nationaltransitionevent.com/",
   "privacyUrl": "https://www.nationaltransitionevent.com/privacy",
   "privacyLinkLabel": "NTE27 Privacy Policy",
   "termsUrl": "",
